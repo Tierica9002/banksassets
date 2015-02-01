@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
 //Route::get('/administrator', 'HomeController@index');
-
+Route::resource('user', 'UserController');
 
 Route::group(array('prefix' => 'administrator'), function() {   
     Route::get('/', 'AdminHomeController@index');

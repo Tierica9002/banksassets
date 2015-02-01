@@ -63,6 +63,8 @@ class AdminHomeController extends BaseController {
         } catch (Cartalyst\Sentry\Users\UserNotActivatedException $e) {
             echo 'User is not activated.';
         }
+        
+        return Redirect::route('dashboard');
     }
 
     public function register() {

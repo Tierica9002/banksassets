@@ -5,10 +5,7 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta charset="utf-8" />
     <title>Bansk & Assets Admin Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    
-    
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />            
     <link rel="apple-touch-icon" href="{{asset('admin/pages/ico/60.png')}}">
     <link rel="apple-touch-icon" sizes="76x76" href="{{asset('admin/pages/ico/76.png')}}">
     <link rel="apple-touch-icon" sizes="120x120" href="{{asset('admin/pages/ico/120.png')}}">
@@ -33,14 +30,6 @@
     <!--[if lte IE 9]>
         <link href="pages/css/ie9.css" rel="stylesheet" type="text/css" />
     <![endif]-->
-
-    <script type="text/javascript">
-    window.onload = function() {
-        // fix for windows 8
-        if (navigator.appVersion.indexOf("Windows NT 6.2") != -1)
-            document.head.innerHTML += '<link rel="stylesheet" type="text/css" href="pages/css/windows.chrome.fix.css" />'
-    }
-    </script>
 </head>
 
 <body class="fixed-header">
@@ -563,7 +552,6 @@
     <!-- BEGIN VENDOR JS -->
     {{HTML::script('admin/assets/plugins/pace/pace.min.js')}}
     {{HTML::script('admin/assets/plugins/jquery/jquery-1.8.3.min.js')}}
-    {{HTML::script('admin/assets/plugins/modernizr.custom.js')}}
     {{HTML::script('admin/assets/plugins/modernizr.custom.js')}}
     {{HTML::script('admin/assets/plugins/jquery-ui/jquery-ui.min.js')}}
     {{HTML::script('admin/assets/plugins/boostrapv3/js/bootstrap.min.js')}}

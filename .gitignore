@@ -1,5 +1,10 @@
 /bootstrap/compiled.php
 /vendor
+/laravel-basics-examples
+/documentation
+/zoner
+/banksassets
+/nbproject
 composer.phar
 composer.lock
 .env.*.php

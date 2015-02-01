@@ -5,6 +5,8 @@
 /zoner
 /banksassets
 /nbproject
+README.md
+readme.md
 composer.phar
 composer.lock
 .env.*.php

@@ -225,7 +225,7 @@
         <div id="overlay"></div>
         {{HTML::script('js/jquery-2.1.0.min.js')}}    
         {{HTML::script('js/jquery-migrate-1.2.1.min.js')}}    
-        {{HTML::script('js/bootstrap.min.js')}}    
+        {{HTML::script('bootstrap/js/bootstrap.min.js')}}    
         {{HTML::script('js/smoothscroll.js')}}    
         {{HTML::script('js/owl.carousel.min.js')}}    
         {{HTML::script('js/bootstrap-select.min.js')}}    
@@ -241,6 +241,7 @@
         {{HTML::script('js/draggable-0.1.js')}}    
         {{HTML::script('js/jquery.slider.js')}}    
         {{HTML::script('js/custom.js')}}    
+        
         <!--[if gt IE 8]>
         <script type="text/javascript" src="http://localhost/laravel/public/js/ie.js"></script>
         <![endif]-->

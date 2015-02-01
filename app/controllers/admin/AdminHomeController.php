@@ -66,41 +66,41 @@ class AdminHomeController extends BaseController {
     }
 
     public function register() {
-//        try {
-//            // Create the group
-//            $group = Sentry::createGroup(array(
-//                        'name' => 'Administrator',
-//                        'permissions' => array(
-//                            'admin' => 1
-//                        ),
-//            ));
-//        } catch (Cartalyst\Sentry\Groups\NameRequiredException $e) {
-//            echo 'Name field is required';
-//        } catch (Cartalyst\Sentry\Groups\GroupExistsException $e) {
-//            echo 'Group already exists';
-//        }
-//        try {
-//            // Create the user
-//            $user = Sentry::createUser(array(
-//                        'email' => 'and.sorescu@gmail.com',
-//                        'password' => 'qwerty123',
-//                        'activated' => true,
-//            ));
-//
-//            // Find the group using the group id
-//            $adminGroup = Sentry::findGroupById(3);
-//
-//            // Assign the group to the user
-//            $user->addGroup($adminGroup);
-//        } catch (Cartalyst\Sentry\Users\LoginRequiredException $e) {
-//            echo 'Login field is required.';
-//        } catch (Cartalyst\Sentry\Users\PasswordRequiredException $e) {
-//            echo 'Password field is required.';
-//        } catch (Cartalyst\Sentry\Users\UserExistsException $e) {
-//            echo 'User with this login already exists.';
-//        } catch (Cartalyst\Sentry\Groups\GroupNotFoundException $e) {
-//            echo 'Group was not found.';
-//        }
+        try {
+            // Create the group
+            $group = Sentry::createGroup(array(
+                        'name' => 'Administrator',
+                        'permissions' => array(
+                            'admin' => 1
+                        ),
+            ));
+        } catch (Cartalyst\Sentry\Groups\NameRequiredException $e) {
+            echo 'Name field is required';
+        } catch (Cartalyst\Sentry\Groups\GroupExistsException $e) {
+            echo 'Group already exists';
+        }
+        try {
+            // Create the user
+            $user = Sentry::createUser(array(
+                        'email' => 'and.sorescu@gmail.com',
+                        'password' => 'qwerty123',
+                        'activated' => true,
+            ));
+
+            // Find the group using the group id
+            $adminGroup = Sentry::findGroupById($group->id);
+
+            // Assign the group to the user
+            $user->addGroup($adminGroup);
+        } catch (Cartalyst\Sentry\Users\LoginRequiredException $e) {
+            echo 'Login field is required.';
+        } catch (Cartalyst\Sentry\Users\PasswordRequiredException $e) {
+            echo 'Password field is required.';
+        } catch (Cartalyst\Sentry\Users\UserExistsException $e) {
+            echo 'User with this login already exists.';
+        } catch (Cartalyst\Sentry\Groups\GroupNotFoundException $e) {
+            echo 'Group was not found.';
+        }
 
         return View::make('admin.register');
     }

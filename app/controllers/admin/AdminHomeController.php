@@ -26,6 +26,11 @@ class AdminHomeController extends BaseController {
         return View::make('admin.login');
     }
 
+    public function logout() {
+        Sentry::logout();
+        return Redirect::route('administrator.login');
+    }
+
     public function doLogin() {
 
         $rules = array(
@@ -42,6 +47,15 @@ class AdminHomeController extends BaseController {
         }
         $email = Input::get('username');
         $password = Input::get('password');
+        $rememberMe = Input::get('remember-me');
+        if ($rememberMe == '1') {
+            $rememberMe = true;
+        } else {
+            $rememberMe = false;
+        }
+
+
+
         try {
             // Login credentials
             $credentials = array(
@@ -51,7 +65,8 @@ class AdminHomeController extends BaseController {
 
             // Authenticate the user
             $user = Sentry::authenticate($credentials, false);
-            Sentry::login($user);
+            // Login the user            
+            Sentry::login($user, $rememberMe);
         } catch (Cartalyst\Sentry\Users\LoginRequiredException $e) {
             echo 'Login field is required.';
         } catch (Cartalyst\Sentry\Users\PasswordRequiredException $e) {
@@ -63,7 +78,7 @@ class AdminHomeController extends BaseController {
         } catch (Cartalyst\Sentry\Users\UserNotActivatedException $e) {
             echo 'User is not activated.';
         }
-        
+
         return Redirect::route('dashboard');
     }
 

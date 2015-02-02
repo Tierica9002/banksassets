@@ -23,6 +23,7 @@ Route::get('/', 'HomeController@index');
 Route::group(array('prefix' => 'administrator'), function() {
     Route::get('/', array('as' => 'dashboard', 'uses' => 'AdminHomeController@index'));
     Route::get('/login', array( 'as'=> 'administrator.login', 'uses' => 'AdminHomeController@login'));
+    Route::get('/logout', array( 'as'=> 'administrator.logout', 'uses' => 'AdminHomeController@logout'));
     Route::post('/login', ['as' => 'administrator.dologin', 'uses' => 'AdminHomeController@doLogin']);
     Route::get('/register', array( 'as'=> 'administrator.register', 'uses' => 'AdminHomeController@register'));
 });

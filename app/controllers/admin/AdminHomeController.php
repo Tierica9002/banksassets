@@ -82,30 +82,19 @@ class AdminHomeController extends BaseController {
         return Redirect::route('dashboard');
     }
 
-    public function register() {
-        try {
-            // Create the group
-            $group = Sentry::createGroup(array(
-                        'name' => 'Administrator',
-                        'permissions' => array(
-                            'admin' => 1
-                        ),
-            ));
-        } catch (Cartalyst\Sentry\Groups\NameRequiredException $e) {
-            echo 'Name field is required';
-        } catch (Cartalyst\Sentry\Groups\GroupExistsException $e) {
-            echo 'Group already exists';
-        }
+    public function register() {        
         try {
             // Create the user
             $user = Sentry::createUser(array(
-                        'email' => 'and.sorescu@gmail.com',
+                        'email' => 'e.sandu@gmail.com',
                         'password' => 'qwerty123',
+                        'first_name' => 'Emanuel',
+                        'last_name' => 'Sandu',
                         'activated' => true,
             ));
 
             // Find the group using the group id
-            $adminGroup = Sentry::findGroupById($group->id);
+            $adminGroup = Sentry::findGroupById(3);
 
             // Assign the group to the user
             $user->addGroup($adminGroup);

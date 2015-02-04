@@ -26,6 +26,12 @@ Route::group(array('prefix' => 'administrator'), function() {
     Route::get('/logout', array( 'as'=> 'administrator.logout', 'uses' => 'AdminHomeController@logout'));
     Route::post('/login', ['as' => 'administrator.dologin', 'uses' => 'AdminHomeController@doLogin']);
     Route::get('/register', array( 'as'=> 'administrator.register', 'uses' => 'AdminHomeController@register'));
+    Route::resource('user', 'UserController');
+    
+//    Route::get('/show-users', ['as' => 'administator.show.users', 'uses' => 'UserController@index']);
+//    Route::get('/edit/{id}', ['as' => 'administator.edit.user', 'uses' => 'UserController@edit']);
+//    Route::get('/update/{id}', ['as' => 'administator.update.user', 'uses' => 'UserController@update']);
+//    Route::get('/delete/{id}', ['as' => 'administator.delete.user', 'uses' => 'UserController@destroy']);   
 });
 
 Route::when('administrator*', 'sentry_is_logged');

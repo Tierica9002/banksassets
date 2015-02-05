@@ -38,8 +38,7 @@
         <![endif]-->
     </head>
 
-    <body class="fixed-header" >
-        {{ Route::getCurrentRoute()->getPath() }}
+    <body class="fixed-header" >            
         @include('admin.partials._sidebar')  
         <div class="page-container">
             <!-- START PAGE HEADER WRAPPER -->
@@ -623,8 +622,8 @@
             
             {{HTML::script('admin/assets/plugins/bootstrap-select2/select2.min.js')}}
             {{HTML::script('admin/assets/plugins/classie/classie.js')}}
-            {{HTML::script('admin/plugins/switchery/js/switchery.min.js')}}
-            {{HTML::script('admin/plugins/bootstrap3-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}
+            {{HTML::script('admin/assets/plugins/switchery/js/switchery.min.js')}}
+            {{HTML::script('admin/assets/plugins/bootstrap3-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}
             
             <!-- END VENDOR JS -->
 

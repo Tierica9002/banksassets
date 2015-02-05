@@ -16,7 +16,7 @@
                     <a href="property-detail.html" class="link-arrow">Read More</a>
                 </div>
             </div>
-            <img alt="" src="{{asset('img/slide-01.jpg')}}">
+            <img alt="" src="{{asset('frontend/img/slide-01.jpg')}}">
         </div>
         <div class="slide">
             <div class="container">
@@ -30,7 +30,7 @@
                     <a href="property-detail.html" class="link-arrow">Read More</a>
                 </div>
             </div>
-            <img alt="" src="{{asset('img/slide-02.jpg')}}">
+            <img alt="" src="{{asset('frontend/img/slide-02.jpg')}}">
         </div>
         <div class="slide">
             <div class="container">
@@ -44,7 +44,7 @@
                     <a href="property-detail.html" class="link-arrow">Read More</a>
                 </div>
             </div>
-            <img alt="" src="{{asset('img/slide-03.jpg')}}">
+            <img alt="" src="{{asset('frontend/img/slide-03.jpg')}}">
         </div>
     </div>
 </div>
@@ -125,7 +125,7 @@
             </div><!-- /.search-box -->
         </div><!-- /.container -->
     </div><!-- /.search-box-inner -->
-    <div class="background-image"><img class="opacity-20" src="{{asset('img/searchbox-bg.jpg')}}"></div>
+    <div class="background-image"><img class="opacity-20" src="{{asset('frontend/img/searchbox-bg.jpg')}}"></div>
 </div>
 <!-- end Search Box -->
 
@@ -186,7 +186,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="{{asset('img/properties/property-06.jpg')}}">
+                                <img alt="" src="{{asset('frontend/img/properties/property-06.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -220,7 +220,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="{{asset('img/properties/property-04.jpg')}}">
+                                <img alt="" src="{{asset('frontend/img/properties/property-04.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -254,7 +254,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="{{asset('img/properties/property-07.jpg')}}">
+                                <img alt="" src="{{asset('frontend/img/properties/property-07.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -288,7 +288,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="{{asset('img/properties/property-08.jpg')}}">
+                                <img alt="" src="{{asset('frontend/img/properties/property-08.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -344,7 +344,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="{{asset('img/properties/property-09.jpg')}}">
+                                <img alt="" src="{{asset('frontend/img/properties/property-09.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -378,7 +378,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="{{asset('img/properties/property-03.jpg')}}">
+                                <img alt="" src="{{asset('frontend/img/properties/property-03.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -412,7 +412,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="{{asset('img/properties/property-06.jpg')}}">
+                                <img alt="" src="{{asset('frontend/img/properties/property-06.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -446,7 +446,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="{{asset('img/properties/property-01.jpg')}}">
+                                <img alt="" src="{{asset('frontend/img/properties/property-01.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -482,7 +482,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="{{asset('img/properties/property-02.jpg')}}">
+                                <img alt="" src="{{asset('frontend/img/properties/property-02.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -516,7 +516,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="{{asset('img/properties/property-12.jpg')}}">
+                                <img alt="" src="{{asset('frontend/img/properties/property-12.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -550,7 +550,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="{{asset('img/properties/property-05.jpg')}}">
+                                <img alt="" src="{{asset('frontend/img/properties/property-05.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -584,7 +584,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="{{asset('img/properties/property-10.jpg')}}">
+                                <img alt="" src="{{asset('frontend/img/properties/property-10.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -624,7 +624,7 @@
                 <blockquote class="testimonial">
                     <figure>
                         <div class="image">
-                            <img alt="" src="{{asset('img/client-01.jpg')}}">
+                            <img alt="" src="{{asset('frontend/img/client-01.jpg')}}">
                         </div>
                     </figure>
                     <aside class="cite">
@@ -635,7 +635,7 @@
                 <blockquote class="testimonial">
                     <figure>
                         <div class="image">
-                            <img alt="" src="{{asset('img/client-01.jpg')}}">
+                            <img alt="" src="{{asset('frontend/img/client-01.jpg')}}">
                         </div>
                     </figure>
                     <aside class="cite">
@@ -650,11 +650,11 @@
         <div class="container">
             <header class="section-title"><h2>Our Partners</h2></header>
             <div class="logos">
-                <div class="logo"><a href=""><img src="{{asset('img/logo-partner-01.png')}}" alt=""></a></div>
-                <div class="logo"><a href=""><img src="{{asset('img/logo-partner-02.png')}}" alt=""></a></div>
-                <div class="logo"><a href=""><img src="{{asset('img/logo-partner-03.png')}}" alt=""></a></div>
-                <div class="logo"><a href=""><img src="{{asset('img/logo-partner-04.png')}}" alt=""></a></div>
-                <div class="logo"><a href=""><img src="{{asset('img/logo-partner-05.png')}}" alt=""></a></div>
+                <div class="logo"><a href=""><img src="{{asset('frontend/img/logo-partner-01.png')}}" alt=""></a></div>
+                <div class="logo"><a href=""><img src="{{asset('frontend/img/logo-partner-02.png')}}" alt=""></a></div>
+                <div class="logo"><a href=""><img src="{{asset('frontend/img/logo-partner-03.png')}}" alt=""></a></div>
+                <div class="logo"><a href=""><img src="{{asset('frontend/img/logo-partner-04.png')}}" alt=""></a></div>
+                <div class="logo"><a href=""><img src="{{asset('frontend/img/logo-partner-05.png')}}" alt=""></a></div>
             </div>
         </div><!-- /.container -->
     </section><!-- /#partners -->

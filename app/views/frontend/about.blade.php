@@ -22,18 +22,18 @@
                                 porta eget justo et, pulvinar vehicula dolor.  Sed at turpis at augue convallis auctor ut in mi
                             </div>
                             <hr class="divider">
-                            <a href="agent-detail.html" class="image"><img alt="" src="{{asset('img/agent-01.jpg')}}"></a>
+                            <a href="agent-detail.html" class="image"><img alt="" src="{{asset('frontend/img/agent-01.jpg')}}"></a>
                             <a href="agent-detail.html"><h3>John Doe</h3></a>
                             <figure class="subtitle">Company CEO</figure>
-                            <div class="background-image"><img alt="" src="{{asset('img/sine-wave.png')}}"></div>
+                            <div class="background-image"><img alt="" src="{{asset('frontend/img/sine-wave.png')}}"></div>
                         </section><!-- /#ceo-section -->
-                        <div class="divider-image center"><img alt="" src="{{asset('img/sine-wave.png')}}"></div>
+                        <div class="divider-image center"><img alt="" src="{{asset('frontend/img/sine-wave.png')}}"></div>
                         <section id="our-team">
                             <header class="center"><h2 class="no-border">Our Team</h2></header>
                             <div class="row">
                                 <div class="col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-5">
                                     <div class="member">
-                                        <a href="agent-detail.html" class="image"><img alt="" src="{{asset('img/client-01.jpg')}}"></a>
+                                        <a href="agent-detail.html" class="image"><img alt="" src="{{asset('frontend/img/client-01.jpg')}}"></a>
                                         <div class="tag">Top Agent</div>
                                         <div class="wrapper">
                                             <a href="agent-detail.html"><h3>Carolyn Sloan</h3></a>
@@ -51,7 +51,7 @@
                                 </div><!-- /.col-md-5 -->
                                 <div class="col-md-5 col-sm-5">
                                     <div class="member">
-                                        <a href="agent-detail.html" class="image"><img alt="" src="{{asset('img/member-01.jpg')}}"></a>
+                                        <a href="agent-detail.html" class="image"><img alt="" src="{{asset('frontend/img/member-01.jpg')}}"></a>
                                         <div class="wrapper">
                                             <a href="agent-detail.html"><h3>Erika Green</h3></a>
                                             <figure class="subtitle">Support</figure>
@@ -70,7 +70,7 @@
                             <div class="row">
                                 <div class="col-md-4 col-sm-4">
                                     <div class="member">
-                                        <a href="agent-detail.html" class="image"><img alt="" src="{{asset('img/member-02.jpg')}}"></a>
+                                        <a href="agent-detail.html" class="image"><img alt="" src="{{asset('frontend/img/member-02.jpg')}}"></a>
                                         <div class="wrapper">
                                             <a href="agent-detail.html"><h3>Mary A. Parrish</h3></a>
                                             <figure class="subtitle">Agent</figure>
@@ -87,7 +87,7 @@
                                 </div><!-- /.col-md-4 -->
                                 <div class="col-md-4 col-sm-4">
                                     <div class="member">
-                                        <a href="agent-detail.html" class="image"><img alt="" src="{{asset('img/member-03.jpg')}}"></a>
+                                        <a href="agent-detail.html" class="image"><img alt="" src="{{asset('frontend/img/member-03.jpg')}}"></a>
                                         <div class="wrapper">
                                             <a href="agent-detail.html"><h3>Russell G. Nowicki</h3></a>
                                             <figure class="subtitle">Agent</figure>
@@ -104,7 +104,7 @@
                                 </div><!-- /.col-md-4 -->
                                 <div class="col-md-4 col-sm-4">
                                     <div class="member">
-                                        <a href="agent-detail.html" class="image"><img alt="" src="{{asset('img/member-04.jpg')}}"></a>
+                                        <a href="agent-detail.html" class="image"><img alt="" src="{{asset('frontend/img/member-04.jpg')}}"></a>
                                         <div class="wrapper">
                                             <a href="agent-detail.html"><h3>Kristine Hicks</h3></a>
                                             <figure class="subtitle">Agent</figure>
@@ -159,7 +159,7 @@
                                 <blockquote class="testimonial">
                                     <figure>
                                         <div class="image">
-                                            <img alt="" src="{{asset('img/client-01.jpg')}}">
+                                            <img alt="" src="{{asset('frontend/img/client-01.jpg')}}">
                                         </div>
                                     </figure>
                                     <aside class="cite">
@@ -170,7 +170,7 @@
                                 <blockquote class="testimonial">
                                     <figure>
                                         <div class="image">
-                                            <img alt="" src="{{asset('img/client-01.jpg')}}">
+                                            <img alt="" src="{{asset('frontend/img/client-01.jpg')}}">
                                         </div>
                                     </figure>
                                     <aside class="cite">

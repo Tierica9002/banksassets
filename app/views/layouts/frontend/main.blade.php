@@ -4,7 +4,6 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="ThemeStarz">
 
         <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>        
         {{HTML::style('frontend/fonts/font-awesome.css')}}        
@@ -38,9 +37,8 @@
                                 <a href="sign-in.html">Sign In</a>
                             </div>
                             <div class="language-bar">
-                                <a href="#" class="active"><img src="{{asset('img/flags/gb.png')}}" alt=""></a>
-                                <a href="#"><img src="{{asset('img/flags/de.png')}}" alt=""></a>
-                                <a href="#"><img src="{{asset('img/flags/es.png')}}" alt=""></a>
+                                <a href="#" class="active"><img src="{{asset('frontend/img/flags/gb.png')}}" alt="English"></a>
+                                <a href="#"><img src="{{asset('frontend/img/flags/ro.png')}}" alt="Romanian"></a>
                             </div>
                         </div>
                     </div>
@@ -55,7 +53,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <div class="navbar-brand nav" id="brand">
-                                <a href="#te-duce-la-homepage"><img src="{{asset('img/BA-Logo.png')}}" alt="brand"></a>
+                                <a href="#te-duce-la-homepage"><img src="{{asset('frontend/img/BA-Logo.png')}}" alt="brand"></a>
                             </div>
                         </div>
                         <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
@@ -163,7 +161,7 @@
                                         <div class="property small">
                                             <a href="property-detail.html">
                                                 <div class="property-image">
-                                                    <img alt="" src="{{asset('img/properties/property-06.jpg')}}">
+                                                    <img alt="" src="{{asset('frontend/img/properties/property-06.jpg')}}">
                                                 </div>
                                             </a>
                                             <div class="info">
@@ -175,7 +173,7 @@
                                         <div class="property small">
                                             <a href="property-detail.html">
                                                 <div class="property-image">
-                                                    <img alt="" src="{{asset('img/properties/property-09.jpg')}}">
+                                                    <img alt="" src="{{asset('frontend/img/properties/property-09.jpg')}}">
                                                 </div>
                                             </a>
                                             <div class="info">

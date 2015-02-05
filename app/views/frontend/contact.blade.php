@@ -159,7 +159,7 @@
                         <div class="property small">
                             <a href="property-detail.html">
                                 <div class="property-image">
-                                    <img alt="" src="{{asset('img/properties/property-06.jpg')}}">
+                                    <img alt="" src="{{asset('frontend/img/properties/property-06.jpg')}}">
                                 </div>
                             </a>
                             <div class="info">
@@ -171,7 +171,7 @@
                         <div class="property small">
                             <a href="property-detail.html">
                                 <div class="property-image">
-                                    <img alt="" src="{{asset('img/properties/property-09.jpg')}}">
+                                    <img alt="" src="{{asset('frontend/img/properties/property-09.jpg')}}">
                                 </div>
                             </a>
                             <div class="info">
@@ -183,7 +183,7 @@
                         <div class="property small">
                             <a href="property-detail.html">
                                 <div class="property-image">
-                                    <img alt="" src="{{asset('img/properties/property-03.jpg')}}">
+                                    <img alt="" src="{{asset('frontend/img/properties/property-03.jpg')}}">
                                 </div>
                             </a>
                             <div class="info">

@@ -15,7 +15,7 @@
         <div class="sidebar-menu">
             <ul class="menu-items">
                 <li class="m-t-30">                                        
-                    <a href="#todo" class="detailed">
+                    <a href="#" class="detailed">
                         <span class="title">Home</span>                        
                     </a>
                     <span class="icon-thumbnail "><i class="pg-home"></i>

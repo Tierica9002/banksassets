@@ -617,8 +617,6 @@
             {{HTML::script('admin/assets/plugins/imagesloaded/imagesloaded.pkgd.min.js')}}
             {{HTML::script('admin/assets/plugins/jquery-actual/jquery.actual.min.js')}}
             {{HTML::script('admin/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js')}}
-
-            <script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
             <!-- END VENDOR JS -->
 
             <!-- BEGIN CORE TEMPLATE JS -->

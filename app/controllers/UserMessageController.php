@@ -27,7 +27,7 @@ class UserMessageController extends \BaseController {
                 'id' => $message->id,
                 'subject' => 'Contact form request',
                 'body' => $message->user_text,
-                'to' => ['no-reply@banks-assets.com'],
+                'to' => [$message->user_email],
                 'time' => (string) $message->created_at,
                 'datetime' => (string) $message->created_at,
                 'from' => $message->user_name,

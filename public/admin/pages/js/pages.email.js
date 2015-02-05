@@ -38,7 +38,7 @@
         "image": true, //Button to insert an image. Default true,
         "color": false, //Button to change color of font  
         "blockquote": true, //Blockquote  
-        stylesheets: [getBaseURL() + "/pages/css/editor.css"],
+        stylesheets: [BASE_URL + "/admin/pages/css/editor.css"],
         customTemplates: editorTemplate
     };
 
@@ -153,7 +153,7 @@
                     }
 
                     !$('.email-reply').data('wysihtml5') && $('.email-reply').wysihtml5(editorOptions);
-
+                    
                     $(".email-content-wrapper").scrollTop(0);
                 }
             });

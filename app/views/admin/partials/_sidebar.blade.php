@@ -21,6 +21,13 @@
                     <span class="icon-thumbnail "><i class="pg-mail"></i>
                     </span>
                 </li>               
+                <li class="m-t-30">                                        
+                    <a href="{{ URL::route('administrator.complex.index') }}" class="detailed">
+                        <span class="title">Complexes</span>                        
+                    </a>
+                    <span class="icon-thumbnail "><i class="pg-mail"></i>
+                    </span>
+                </li>               
             </ul>
             <div class="clearfix"></div>
         </div>

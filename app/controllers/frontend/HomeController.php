@@ -15,9 +15,12 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function index()
-	{
+	public function index() {
 		return View::make('frontend.index');
 	}
+        
+        public function about() {
+                return View::make('frontend.about');
+        }
         
 }

@@ -35,7 +35,8 @@
         <![endif]-->
     </head>
 
-    <body class="fixed-header">
+    <body class="fixed-header" >
+        {{ Route::getCurrentRoute()->getPath() }}
         @include('admin.partials._sidebar')  
         <div class="page-container">
             <!-- START PAGE HEADER WRAPPER -->

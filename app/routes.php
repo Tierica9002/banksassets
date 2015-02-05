@@ -19,6 +19,7 @@ Route::filter('sentry_is_logged', function() {
 });
 
 Route::get('/', 'HomeController@index');
+Route::get('/about', array('as' => 'main.about', 'uses' => 'HomeController@about') );
 
 Route::group(array('prefix' => 'administrator'), function() {
     Route::get('/', array('as' => 'dashboard', 'uses' => 'AdminHomeController@index'));
@@ -27,6 +28,7 @@ Route::group(array('prefix' => 'administrator'), function() {
     Route::post('/login', ['as' => 'administrator.dologin', 'uses' => 'AdminHomeController@doLogin']);
     Route::get('/register', array( 'as'=> 'administrator.register', 'uses' => 'AdminHomeController@register'));
     Route::resource('user', 'UserController');
+    Route::resource('complex', 'ComplexController');
     
 //    Route::get('/show-users', ['as' => 'administator.show.users', 'uses' => 'UserController@index']);
 //    Route::get('/edit/{id}', ['as' => 'administator.edit.user', 'uses' => 'UserController@edit']);

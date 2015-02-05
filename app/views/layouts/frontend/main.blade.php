@@ -14,10 +14,14 @@
         {{HTML::style('css/owl.carousel.css')}}        
         {{HTML::style('css/owl.transitions.css')}}        
         {{HTML::style('css/style.css')}}        
+        @if (Route::getCurrentRoute()->getPath() == 'about')
+            {{HTML::style('css/magnific-popup.css')}}                
+        @endif
         <title>Banks & Assets</title>
     </head>
-
-    <body class="page-homepage navigation-fixed-top page-slider horizontal-search" id="page-top" data-spy="scroll" data-target=".navigation" data-offset="90">
+    <body class="@if (Route::getCurrentRoute()->getPath() == 'about')page-sub-page page-about-us @endif 
+                 @if (Route::getCurrentRoute()->getPath() == '/')
+                 page-homepage navigation-fixed-top page-slider horizontal-search @endif" id="page-top" @if (Route::getCurrentRoute()->getPath() == '/') data-spy="scroll" data-target=".navigation" data-offset="90" @endif>
         <!-- Wrapper -->
         <div class="wrapper">
 
@@ -151,7 +155,7 @@
                                             id, ornare tortor
                                         </p>
                                         <hr>
-                                        <a href="#" class="link-arrow">Read More</a>
+                                        <a href="{{ URL::route('main.about') }}" class="link-arrow">Read More</a>
                                     </article>
                                 </div><!-- /.col-sm-3 -->
                                 <div class="col-md-3 col-sm-3">
@@ -242,6 +246,11 @@
         {{HTML::script('js/jquery.slider.js')}}    
         {{HTML::script('js/custom.js')}}    
         
+        
+        @if (Route::getCurrentRoute()->getPath() == 'about')
+            {{HTML::script('js/waypoints.min.js')}}                
+            {{HTML::script('js/jquery.countTo.js')}}                
+        @endif               
         <!--[if gt IE 8]>
         <script type="text/javascript" src="http://localhost/laravel/public/js/ie.js"></script>
         <![endif]-->

@@ -7,15 +7,15 @@
         <meta name="author" content="ThemeStarz">
 
         <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>        
-        {{HTML::style('fonts/font-awesome.css')}}        
-        {{HTML::style('bootstrap/css/bootstrap.css')}}        
-        {{HTML::style('css/bootstrap-select.min.css')}}        
-        {{HTML::style('css/jquery.slider.min.css')}}        
-        {{HTML::style('css/owl.carousel.css')}}        
-        {{HTML::style('css/owl.transitions.css')}}        
-        {{HTML::style('css/style.css')}}        
+        {{HTML::style('frontend/fonts/font-awesome.css')}}        
+        {{HTML::style('frontend/bootstrap/css/bootstrap.css')}}        
+        {{HTML::style('frontend/css/bootstrap-select.min.css')}}        
+        {{HTML::style('frontend/css/jquery.slider.min.css')}}        
+        {{HTML::style('frontend/css/owl.carousel.css')}}        
+        {{HTML::style('frontend/css/owl.transitions.css')}}        
+        {{HTML::style('frontend/css/style.css')}}        
         @if (Route::getCurrentRoute()->getPath() == 'about')
-        {{HTML::style('css/magnific-popup.css')}}                
+        {{HTML::style('frontend/css/magnific-popup.css')}}                
         @endif
         <title>Banks & Assets</title>
     </head>
@@ -226,24 +226,24 @@
         </div>
 
         <div id="overlay"></div>
-        {{HTML::script('js/jquery-2.1.0.min.js')}}    
-        {{HTML::script('js/jquery-migrate-1.2.1.min.js')}}    
-        {{HTML::script('bootstrap/js/bootstrap.min.js')}}    
-        {{HTML::script('js/smoothscroll.js')}}    
-        {{HTML::script('js/owl.carousel.min.js')}}    
-        {{HTML::script('js/bootstrap-select.min.js')}}    
-        {{HTML::script('js/jquery.validate.min.js')}}    
-        {{HTML::script('js/jquery.placeholder.js')}}    
-        {{HTML::script('js/icheck.min.js')}}    
-        {{HTML::script('js/jquery.vanillabox-0.1.5.min.js')}}    
-        {{HTML::script('js/retina-1.1.0.min.js')}}    
-        {{HTML::script('js/jshashtable-2.1_src.js')}}    
-        {{HTML::script('js/jquery.numberformatter-1.2.3.js')}}    
-        {{HTML::script('js/tmpl.js')}}    
-        {{HTML::script('js/jquery.dependClass-0.1.js')}}    
-        {{HTML::script('js/draggable-0.1.js')}}    
-        {{HTML::script('js/jquery.slider.js')}}    
-        {{HTML::script('js/custom.js')}}    
+        {{HTML::script('frontend/js/jquery-2.1.0.min.js')}}    
+        {{HTML::script('frontend/js/jquery-migrate-1.2.1.min.js')}}    
+        {{HTML::script('frontend/bootstrap/js/bootstrap.min.js')}}    
+        {{HTML::script('frontend/js/smoothscroll.js')}}    
+        {{HTML::script('frontend/js/owl.carousel.min.js')}}    
+        {{HTML::script('frontend/js/bootstrap-select.min.js')}}    
+        {{HTML::script('frontend/js/jquery.validate.min.js')}}    
+        {{HTML::script('frontend/js/jquery.placeholder.js')}}    
+        {{HTML::script('frontend/js/icheck.min.js')}}    
+        {{HTML::script('frontend/js/jquery.vanillabox-0.1.5.min.js')}}    
+        {{HTML::script('frontend/js/retina-1.1.0.min.js')}}    
+        {{HTML::script('frontend/js/jshashtable-2.1_src.js')}}    
+        {{HTML::script('frontend/js/jquery.numberformatter-1.2.3.js')}}    
+        {{HTML::script('frontend/js/tmpl.js')}}    
+        {{HTML::script('frontend/js/jquery.dependClass-0.1.js')}}    
+        {{HTML::script('frontend/js/draggable-0.1.js')}}    
+        {{HTML::script('frontend/js/jquery.slider.js')}}    
+        {{HTML::script('frontend/js/custom.js')}}    
 
 
         @if (Route::getCurrentRoute()->getPath() == 'about')

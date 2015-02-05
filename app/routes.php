@@ -24,7 +24,7 @@ Route::get('/contact', array('as' => 'main.contact', 'uses' => 'HomeController@c
 Route::post('/message', array('as' => 'main.sendmessage', 'uses' => 'UserMessageController@store'));
 
 Route::group(array('prefix' => 'administrator'), function() {
-    Route::get('/', array('as' => 'admin.dashboard', 'uses' => 'AdminHomeController@index'));
+    Route::get('/', array('as' => 'administrator.dashboard', 'uses' => 'AdminHomeController@index'));
     Route::get('/login', array( 'as'=> 'administrator.login', 'uses' => 'AdminHomeController@login'));
     Route::get('/logout', array( 'as'=> 'administrator.logout', 'uses' => 'AdminHomeController@logout'));
     Route::post('/login', ['as' => 'administrator.dologin', 'uses' => 'AdminHomeController@doLogin']);

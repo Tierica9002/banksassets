@@ -30,7 +30,7 @@
                 </li>               
                 <li class="m-t-30">                                        
                     <a href="{{ URL::route('administrator.message.index') }}" class="detailed">
-                        <span class="title">Complexes</span>                        
+                        <span class="title">Messages</span>                        
                     </a>
                     <span class="icon-thumbnail "><i class="pg-mail"></i>
                     </span>

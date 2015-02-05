@@ -5,6 +5,9 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="shortcut icon" href="{{asset('frontend/ico/favicon.ico')}}" type="image/x-icon">
+        <link rel="icon" href="{{asset('frontend/ico/favicon.ico')}}" type="image/x-icon">
+
         <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>        
         {{HTML::style('frontend/fonts/font-awesome.css')}}        
         {{HTML::style('frontend/bootstrap/css/bootstrap.css')}}        
@@ -53,7 +56,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <div class="navbar-brand nav" id="brand">
-                                <a href="#te-duce-la-homepage"><img src="{{asset('frontend/img/BA-Logo.png')}}" alt="brand"></a>
+                                <a href="#te-duce-la-homepage"><img src="{{asset('frontend/img/ba-logo-blue-long.png')}}" alt="brand"></a>
                             </div>
                         </div>
                         <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">

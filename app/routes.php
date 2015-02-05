@@ -14,7 +14,7 @@ Route::filter('sentry_is_logged', function() {
     if (!Sentry::check() && (Request::path() != 'administrator/login' && Request::path() != 'administrator/register')) {
         return Redirect::route('administrator.login');
     } elseif(Sentry::check() && (Request::path() == 'administrator/login' || Request::path() == 'administrator/register')) {       
-        return Redirect::route('admin.dashboard');
+        return Redirect::route('administrator.dashboard');
     }
 });
 

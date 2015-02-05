@@ -32,7 +32,6 @@ class AdminHomeController extends BaseController {
     }
 
     public function doLogin() {
-
         $rules = array(
             'username' => ['required'],
             'password' => ['required']
@@ -40,7 +39,7 @@ class AdminHomeController extends BaseController {
 
         // pass input to validator
         $validator = Validator::make(Input::all(), $rules);
-
+        
         // test if input fails
         if ($validator->fails()) {
             return Redirect::route('administrator.login')->withErrors($validator);
@@ -79,7 +78,7 @@ class AdminHomeController extends BaseController {
             echo 'User is not activated.';
         }
 
-        return Redirect::route('admin.dashboard');
+        return Redirect::route('administrator.dashboard');
     }
 
     public function register() {        

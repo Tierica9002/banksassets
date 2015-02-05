@@ -79,7 +79,7 @@ class AdminHomeController extends BaseController {
             echo 'User is not activated.';
         }
 
-        return Redirect::route('dashboard');
+        return Redirect::route('admin.dashboard');
     }
 
     public function register() {        

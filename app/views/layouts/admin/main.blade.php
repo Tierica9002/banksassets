@@ -146,7 +146,7 @@
             </div>
             <!-- END HEADER -->
             <!-- END PAGE HEADER WRAPPER -->
-            @yield('content')            
+            @yield('content')                
             <!--START QUICKVIEW -->
             <div id="quickview" class="quickview-wrapper" data-pages="quickview">
                 <!-- Nav tabs -->
@@ -604,6 +604,9 @@
             <!-- END OVERLAY -->
 
             <!-- BEGIN VENDOR JS -->
+            <script>
+                var BASE_URL = "{{URL::to('/');}}";
+            </script>
             {{HTML::script('admin/assets/plugins/pace/pace.min.js')}}
             {{HTML::script('admin/assets/plugins/jquery/jquery-1.8.3.min.js')}}
             {{HTML::script('admin/assets/plugins/modernizr.custom.js')}}
@@ -616,11 +619,16 @@
             {{HTML::script('admin/assets/plugins/imagesloaded/imagesloaded.pkgd.min.js')}}
             {{HTML::script('admin/assets/plugins/imagesloaded/imagesloaded.pkgd.min.js')}}
             {{HTML::script('admin/assets/plugins/jquery-actual/jquery.actual.min.js')}}
-            {{HTML::script('admin/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js')}}
+            {{HTML::script('admin/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js')}}         
+            {{HTML::script('admin/assets/plugins/bootstrap-select2/select2.min.js')}}
+            {{HTML::script('admin/assets/plugins/classie/classie.js')}}
+            {{HTML::script('admin/plugins/switchery/js/switchery.min.js')}}
+            {{HTML::script('admin/plugins/bootstrap3-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}
             <!-- END VENDOR JS -->
 
             <!-- BEGIN CORE TEMPLATE JS -->
             {{HTML::script('admin/pages/js/pages.js')}}
+            {{HTML::script('admin/pages/js/pages.email.js')}}
             <!-- END CORE TEMPLATE JS -->
 
             <!-- BEGIN PAGE LEVEL JS -->

@@ -51,7 +51,7 @@
         // Load list of emails
         $.ajax({
             dataType: "json",
-            url: "http://revox.io/json/emails.json",
+            url: BASE_URL + "/administrator/serve-emails",
             success: function(data) {
 
 
@@ -120,7 +120,7 @@
             var thumbnailWrapper = $(this).find('.thumbnail-wrapper');
             $.ajax({
                 dataType: "json",
-                url: "http://revox.io/json/emails.json",
+                url: BASE_URL + "/administrator/serve-emails",
                 success: function(data) {
                     $.each(data.emails, function(i) {
                         var obj = data.emails[i];

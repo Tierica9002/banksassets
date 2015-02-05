@@ -15,15 +15,14 @@
         {{HTML::style('css/owl.transitions.css')}}        
         {{HTML::style('css/style.css')}}        
         @if (Route::getCurrentRoute()->getPath() == 'about')
-            {{HTML::style('css/magnific-popup.css')}}                
+        {{HTML::style('css/magnific-popup.css')}}                
         @endif
         <title>Banks & Assets</title>
     </head>
-    <body class="@if (Route::getCurrentRoute()->getPath() == 'about')page-sub-page page-about-us @endif 
-                 @if (Route::getCurrentRoute()->getPath() == '/')
-                 page-homepage navigation-fixed-top page-slider horizontal-search @endif" id="page-top" @if (Route::getCurrentRoute()->getPath() == '/') data-spy="scroll" data-target=".navigation" data-offset="90" @endif>
-        <!-- Wrapper -->
-        <div class="wrapper">
+
+    <body class="{{$context_data['body_class']}}" id="page-top" @if (Route::getCurrentRoute()->getPath() == '/') data-spy="scroll" data-target=".navigation" data-offset="90" @endif>
+          <!-- Wrapper -->
+          <div class="wrapper">
 
             <div class="navigation">
                 <div class="secondary-navigation">
@@ -129,7 +128,7 @@
                                         <li><a href="blog-detail.html">Blog Post Detail</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{ URL::route('main.contact') }}">Contact</a></li>
                             </ul>
                         </nav><!-- /.navbar collapse-->
                         <div class="add-your-property">
@@ -245,19 +244,29 @@
         {{HTML::script('js/draggable-0.1.js')}}    
         {{HTML::script('js/jquery.slider.js')}}    
         {{HTML::script('js/custom.js')}}    
-        
-        
+
+
         @if (Route::getCurrentRoute()->getPath() == 'about')
-            {{HTML::script('js/waypoints.min.js')}}                
-            {{HTML::script('js/jquery.countTo.js')}}                
+        {{HTML::script('js/waypoints.min.js')}}                
+        {{HTML::script('js/jquery.countTo.js')}}                
+        @endif               
+        @if (Route::getCurrentRoute()->getPath() == 'contact')
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        {{HTML::script('js/custom-map.js')}}       
+        {{HTML::script('js/markerwithlabel_packed.js')}}       
+        {{HTML::script('js/infobox.js')}}       
+        {{HTML::script('js/custom-map.js')}}        
         @endif               
         <!--[if gt IE 8]>
         <script type="text/javascript" src="http://localhost/laravel/public/js/ie.js"></script>
         <![endif]-->
         <script>
-$(window).load(function() {
-    initializeOwl(false);
-});
+            $(window).load(function() {
+                initializeOwl(false);
+            });
+            _latitude = 48.87;
+            _longitude = 2.29;
+            google.maps.event.addDomListener(window, 'load', contactUsMap(_latitude, _longitude));
         </script>
     </body>
 </html>

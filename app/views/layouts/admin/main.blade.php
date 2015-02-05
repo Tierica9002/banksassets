@@ -6,12 +6,12 @@
         <meta charset="utf-8" />
         <title>Banks & Assets Admin Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />            
-        <link rel="apple-touch-icon" href="{{asset('admin/pages/ico/60.png')}}">
-        <link rel="apple-touch-icon" sizes="76x76" href="{{asset('admin/pages/ico/76.png')}}">
-        <link rel="apple-touch-icon" sizes="120x120" href="{{asset('admin/pages/ico/120.png')}}">
-        <link rel="apple-touch-icon" sizes="152x152" href="{{asset('admin/pages/ico/152.png')}}">
-        <link rel="shortcut icon" href="{{asset('admin/pages/ico/favicon.ico')}}" type="image/x-icon">
-        <link rel="icon" href="{{asset('admin/pages/ico/favicon.ico')}}" type="image/x-icon">
+        <link rel="apple-touch-icon" href="{{asset('admin/ico/60.png')}}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{asset('admin/ico/76.png')}}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{asset('admin/ico/120.png')}}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{asset('admin/ico/152.png')}}">
+        <link rel="shortcut icon" href="{{asset('admin/ico/favicon.ico')}}" type="image/x-icon">
+        <link rel="icon" href="{{asset('admin/ico/favicon.ico')}}" type="image/x-icon">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-touch-fullscreen" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -19,19 +19,19 @@
         <meta content="" name="author" />
 
         <!-- BEGIN Vendor CSS-->
-        {{HTML::style('admin/assets/plugins/pace/pace-theme-flash.css')}}
-        {{HTML::style('admin/assets/plugins/boostrapv3/css/bootstrap.min.css')}}
-        {{HTML::style('admin/assets/plugins/font-awesome/css/font-awesome.css')}}
-        {{HTML::style('admin/assets/plugins/jquery-scrollbar/jquery.scrollbar.css')}}
-        {{HTML::style('admin/assets/plugins/bootstrap-select2/select2.css')}}
-        {{HTML::style('admin/assets/plugins/switchery/css/switchery.min.css')}}
-        {{HTML::style('admin/assets/plugins/jquery-datatable/media/css/jquery.dataTables.css')}}
-        {{HTML::style('admin/assets/plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css')}}
-        {{HTML::style('admin/assets/plugins/datatables-responsive/css/datatables.responsive.css')}}
+        {{HTML::style('admin/plugins/pace/pace-theme-flash.css')}}
+        {{HTML::style('admin/plugins/boostrapv3/css/bootstrap.min.css')}}
+        {{HTML::style('admin/plugins/font-awesome/css/font-awesome.css')}}
+        {{HTML::style('admin/plugins/jquery-scrollbar/jquery.scrollbar.css')}}
+        {{HTML::style('admin/plugins/bootstrap-select2/select2.css')}}
+        {{HTML::style('admin/plugins/switchery/css/switchery.min.css')}}
+        {{HTML::style('admin/plugins/jquery-datatable/media/css/jquery.dataTables.css')}}
+        {{HTML::style('admin/plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css')}}
+        {{HTML::style('admin/plugins/datatables-responsive/css/datatables.responsive.css')}}
 
         <!-- BEGIN Pages CSS-->
-        {{HTML::style('admin/pages/css/pages-icons.css')}}
-        {{HTML::style('admin/pages/css/pages.css', ['class' => 'main-stylesheet'])}}
+        {{HTML::style('admin/css/pages-icons.css')}}
+        {{HTML::style('admin/css/pages.css', ['class' => 'main-stylesheet'])}}
 
         <!--[if lte IE 9]>
             <link href="pages/css/ie9.css" rel="stylesheet" type="text/css" />
@@ -69,7 +69,7 @@
                 <div class=" pull-left sm-table">
                     <div class="header-inner">
                         <div class="brand inline">
-                            <img src="{{asset('admin/assets/img/logo.png')}}" alt="logo" data-src="{{asset('admin/assets/img/logo.png')}}" data-src-retina="{{asset('admin/assets/img/logo_2x.png')}}" width="93" height="25">
+                            <img src="{{asset('admin/img/logo.png')}}" alt="logo" data-src="{{asset('admin/img/logo.png')}}" data-src-retina="{{asset('admin/img/logo_2x.png')}}" width="93" height="25">
                         </div>
                         <!-- BEGIN NOTIFICATION DROPDOWN -->
                         <ul class="notification-list no-margin hidden-sm hidden-xs b-grey b-l b-r no-style p-l-30 p-r-20">
@@ -137,7 +137,7 @@
                             <span class="text-master">Nest</span>
                         </div>
                         <div class="thumbnail-wrapper d32 circular inline m-t-5">
-                            <img src="{{asset('admin/assets/img/profiles/avatar.jpg')}}" alt="" data-src="{{asset('admin/assets/img/profiles/avatar.jpg')}}" data-src-retina="{{asset('admin/assets/img/profiles/avatar2x.jpg')}}" width="32" height="32">
+                            <img src="{{asset('admin/img/profiles/avatar.jpg')}}" alt="" data-src="{{asset('admin/img/profiles/avatar.jpg')}}" data-src-retina="{{asset('admin/img/profiles/avatar2x.jpg')}}" width="32" height="32">
                         </div>
                     </div>
                     <!-- END User Info-->
@@ -329,7 +329,7 @@
                                                 <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                                                     <span class="col-xs-height col-middle">
                                                         <span class="thumbnail-wrapper d32 circular bg-success">
-                                                            <img width="34" height="34" alt="" data-src-retina="{{asset('admin/assets/img/profiles/1x.jpg')}}" data-src="{{asset('admin/assets/img/profiles/1.jpg')}}" src="{{asset('admin/assets/img/profiles/1x.jpg')}}" class="col-top">
+                                                            <img width="34" height="34" alt="" data-src-retina="{{asset('admin/img/profiles/1x.jpg')}}" data-src="{{asset('admin/img/profiles/1.jpg')}}" src="{{asset('admin/img/profiles/1x.jpg')}}" class="col-top">
                                                         </span>
                                                     </span>
                                                     <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -349,7 +349,7 @@
                                                 <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                                                     <span class="col-xs-height col-middle">
                                                         <span class="thumbnail-wrapper d32 circular bg-success">
-                                                            <img width="34" height="34" alt="" data-src-retina="{{asset('admin/assets/img/profiles/2x.jpg')}}" data-src="{{asset('admin/assets/img/profiles/1.jpg')}}" src="{{asset('admin/assets/img/profiles/2x.jpg')}}" class="col-top">
+                                                            <img width="34" height="34" alt="" data-src-retina="{{asset('admin/img/profiles/2x.jpg')}}" data-src="{{asset('admin/img/profiles/1.jpg')}}" src="{{asset('admin/img/profiles/2x.jpg')}}" class="col-top">
                                                         </span>
                                                     </span>
                                                     <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -364,7 +364,7 @@
                                                 <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                                                     <span class="col-xs-height col-middle">
                                                         <span class="thumbnail-wrapper d32 circular bg-success">
-                                                            <img width="34" height="34" alt="" data-src-retina="{{asset('admin/assets/img/profiles/3x.jpg')}}" data-src="{{asset('admin/assets/img/profiles/3.jpg')}}" src="{{asset('admin/assets/img/profiles/3x.jpg')}}" class="col-top">
+                                                            <img width="34" height="34" alt="" data-src-retina="{{asset('admin/img/profiles/3x.jpg')}}" data-src="{{asset('admin/img/profiles/3.jpg')}}" src="{{asset('admin/img/profiles/3x.jpg')}}" class="col-top">
                                                         </span>
                                                     </span>
                                                     <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -409,7 +409,7 @@
                                     <!-- BEGIN From Them Message  !-->
                                     <div class="message clearfix">
                                         <div class="profile-img-wrapper m-t-5 inline">
-                                            <img class="col-top" width="30" height="30" src="{{asset('admin/assets/img/profiles/avatar_small.jpg')}}" alt="" data-src="{{asset('admin/assets/img/profiles/avatar_small.jpg')}}" data-src-retina="{{asset('admin/assets/img/profiles/avatar_small2x.jpg')}}">
+                                            <img class="col-top" width="30" height="30" src="{{asset('admin/img/profiles/avatar_small.jpg')}}" alt="" data-src="{{asset('admin/img/profiles/avatar_small.jpg')}}" data-src-retina="{{asset('admin/img/profiles/avatar_small2x.jpg')}}">
                                         </div>
                                         <div class="chat-bubble from-them">
                                             Hey
@@ -433,7 +433,7 @@
                                     <!-- BEGIN From Them Message  !-->
                                     <div class="message clearfix">
                                         <div class="profile-img-wrapper m-t-5 inline">
-                                            <img class="col-top" width="30" height="30" src="{{asset('admin/assets/img/profiles/avatar_small.jpg')}}" alt="" data-src="{{asset('admin/assets/img/profiles/avatar_small.jpg')}}" data-src-retina="{{asset('admin/assets/img/profiles/avatar_small2x.jpg')}}">
+                                            <img class="col-top" width="30" height="30" src="{{asset('admin/img/profiles/avatar_small.jpg')}}" alt="" data-src="{{asset('admin/img/profiles/avatar_small.jpg')}}" data-src-retina="{{asset('admin/img/profiles/avatar_small2x.jpg')}}">
                                         </div>
                                         <div class="chat-bubble from-them">
                                             Yea
@@ -471,7 +471,7 @@
                     <!-- BEGIN Overlay Header !-->
                     <div class="container-fluid">
                         <!-- BEGIN Overlay Logo !-->
-                        <img class="overlay-brand" src="{{asset('admin/assets/img/logo.png')}}" alt="logo" data-src="{{asset('admin/assets/img/logo.png')}}" data-src-retina="{{asset('admin/assets/img/logo.png')}}" width="78" height="22">
+                        <img class="overlay-brand" src="{{asset('admin/img/logo.png')}}" alt="logo" data-src="{{asset('admin/img/logo.png')}}" data-src-retina="{{asset('admin/img/logo.png')}}" width="78" height="22">
                         <!-- END Overlay Logo !-->
                         <!-- BEGIN Overlay Close !-->
                         <a href="#" class="close-icon-light overlay-close text-black fs-16">
@@ -511,7 +511,7 @@
                                         <!-- BEGIN Search Result Item Thumbnail !-->
                                         <div class="thumbnail-wrapper d48 circular bg-success text-white inline m-t-10">
                                             <div>
-                                                <img width="50" height="50" src="{{asset('admin/assets/img/profiles/avatar.jpg')}}" data-src="{{asset('admin/assets/img/profiles/avatar.jpg')}}" data-src-retina="{{asset('admin/assets/img/profiles/avatar.jpg')}}" alt="">
+                                                <img width="50" height="50" src="{{asset('admin/img/profiles/avatar.jpg')}}" data-src="{{asset('admin/img/profiles/avatar.jpg')}}" data-src-retina="{{asset('admin/img/profiles/avatar.jpg')}}" alt="">
                                             </div>
                                         </div>
                                         <!-- END Search Result Item Thumbnail !-->
@@ -606,32 +606,32 @@
             <script>
                 var BASE_URL = "{{URL::to('/');}}";
             </script>
-            {{HTML::script('admin/assets/plugins/pace/pace.min.js')}}
-            {{HTML::script('admin/assets/plugins/jquery/jquery-1.8.3.min.js')}}
-            {{HTML::script('admin/assets/plugins/modernizr.custom.js')}}
-            {{HTML::script('admin/assets/plugins/jquery-ui/jquery-ui.min.js')}}
-            {{HTML::script('admin/assets/plugins/boostrapv3/js/bootstrap.min.js')}}
-            {{HTML::script('admin/assets/plugins/jquery/jquery-easy.js')}}
-            {{HTML::script('admin/assets/plugins/jquery-unveil/jquery.unveil.min.js')}}
-            {{HTML::script('admin/assets/plugins/jquery-bez/jquery.bez.min.js')}}
-            {{HTML::script('admin/assets/plugins/jquery-ios-list/jquery.ioslist.min.js')}}
-            {{HTML::script('admin/assets/plugins/imagesloaded/imagesloaded.pkgd.min.js')}}
-            {{HTML::script('admin/assets/plugins/imagesloaded/imagesloaded.pkgd.min.js')}}
-            {{HTML::script('admin/assets/plugins/jquery-actual/jquery.actual.min.js')}}
-            {{HTML::script('admin/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js')}}         
-            {{HTML::script('admin/assets/plugins/bootstrap-select2/select2.min.js')}}
-            {{HTML::script('admin/assets/plugins/classie/classie.js')}}
-            {{HTML::script('admin/assets/plugins/switchery/js/switchery.min.js')}}
-            {{HTML::script('admin/assets/plugins/bootstrap3-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}
+            {{HTML::script('admin/plugins/pace/pace.min.js')}}
+            {{HTML::script('admin/plugins/jquery/jquery-1.8.3.min.js')}}
+            {{HTML::script('admin/plugins/modernizr.custom.js')}}
+            {{HTML::script('admin/plugins/jquery-ui/jquery-ui.min.js')}}
+            {{HTML::script('admin/plugins/boostrapv3/js/bootstrap.min.js')}}
+            {{HTML::script('admin/plugins/jquery/jquery-easy.js')}}
+            {{HTML::script('admin/plugins/jquery-unveil/jquery.unveil.min.js')}}
+            {{HTML::script('admin/plugins/jquery-bez/jquery.bez.min.js')}}
+            {{HTML::script('admin/plugins/jquery-ios-list/jquery.ioslist.min.js')}}
+            {{HTML::script('admin/plugins/imagesloaded/imagesloaded.pkgd.min.js')}}
+            {{HTML::script('admin/plugins/imagesloaded/imagesloaded.pkgd.min.js')}}
+            {{HTML::script('admin/plugins/jquery-actual/jquery.actual.min.js')}}
+            {{HTML::script('admin/plugins/jquery-scrollbar/jquery.scrollbar.min.js')}}         
+            {{HTML::script('admin/plugins/bootstrap-select2/select2.min.js')}}
+            {{HTML::script('admin/plugins/classie/classie.js')}}
+            {{HTML::script('admin/plugins/switchery/js/switchery.min.js')}}
+            {{HTML::script('admin/plugins/bootstrap3-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}
             <!-- END VENDOR JS -->
 
             <!-- BEGIN CORE TEMPLATE JS -->
-            {{HTML::script('admin/pages/js/pages.js')}}
-            {{HTML::script('admin/pages/js/pages.email.js')}}
+            {{HTML::script('admin/js/pages.js')}}
+            {{HTML::script('admin/js/pages.email.js')}}
             <!-- END CORE TEMPLATE JS -->
 
             <!-- BEGIN PAGE LEVEL JS -->
-            {{HTML::script('admin/assets/js/scripts.js')}}
+            {{HTML::script('admin/js/scripts.js')}}
             <!-- END PAGE LEVEL JS -->
     </body>
 </html>

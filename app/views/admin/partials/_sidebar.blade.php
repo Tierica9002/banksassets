@@ -15,13 +15,20 @@
         <div class="sidebar-menu">
             <ul class="menu-items">
                 <li class="m-t-30">                                        
+                    <a href="#todo" class="detailed">
+                        <span class="title">Home</span>                        
+                    </a>
+                    <span class="icon-thumbnail "><i class="pg-home"></i>
+                    </span>
+                </li>
+                <li class>                                        
                     <a href="{{ URL::route('administrator.user.index') }}" class="detailed">
                         <span class="title">Users</span>                        
                     </a>
-                    <span class="icon-thumbnail "><i class="pg-mail"></i>
+                    <span class="icon-thumbnail "><i class="fa fa-user"></i>
                     </span>
-                </li>               
-                <li class="m-t-30">                                        
+                </li>           
+                <li class>                                        
                     <a href="{{ URL::route('administrator.complex.index') }}" class="detailed">
                         <span class="title">Complexes</span>                        
                     </a>

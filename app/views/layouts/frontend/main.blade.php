@@ -245,15 +245,15 @@
 
 
         @if (Route::getCurrentRoute()->getPath() == 'about')
-        {{HTML::script('js/waypoints.min.js')}}                
-        {{HTML::script('js/jquery.countTo.js')}}                
+        {{HTML::script('frontend/js/waypoints.min.js')}}                
+        {{HTML::script('frontend/js/jquery.countTo.js')}}                
         @endif               
         @if (Route::getCurrentRoute()->getPath() == 'contact')
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-        {{HTML::script('js/custom-map.js')}}       
-        {{HTML::script('js/markerwithlabel_packed.js')}}       
-        {{HTML::script('js/infobox.js')}}       
-        {{HTML::script('js/custom-map.js')}}        
+        {{HTML::script('frontend/js/custom-map.js')}}       
+        {{HTML::script('frontend/js/markerwithlabel_packed.js')}}       
+        {{HTML::script('frontend/js/infobox.js')}}       
+        {{HTML::script('frontend/js/custom-map.js')}}        
         @endif               
         <!--[if gt IE 8]>
         <script type="text/javascript" src="http://localhost/laravel/public/js/ie.js"></script>

@@ -1,4 +1,4 @@
-@extends('layouts.frontend.main')
+@extends('frontend.layouts.main')
 @section('content')
 <div id="page-content">
         <!-- Breadcrumb -->

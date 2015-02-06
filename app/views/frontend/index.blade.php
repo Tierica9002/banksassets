@@ -1,4 +1,4 @@
-@extends('layouts.frontend.main')
+@extends('frontend.layouts.main')
 @section('content')
 <!-- Slider -->
 <div id="slider" class="loading has-parallax">

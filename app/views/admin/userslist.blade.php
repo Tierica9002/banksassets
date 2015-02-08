@@ -1,4 +1,4 @@
-@extends('layouts.admin.main')
+@extends('admin.layouts.main')
 @section('content')
 <!-- START PAGE CONTENT WRAPPER -->
 <div class="page-content-wrapper">

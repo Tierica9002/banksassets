@@ -32,10 +32,10 @@
                     <a href="{{ URL::route('administrator.complex.index') }}" class="detailed">
                         <span class="title">Complexes</span>                        
                     </a>
-                    <span class="icon-thumbnail "><i class="pg-mail"></i>
+                    <span class="icon-thumbnail "><i class="fa fa-building"></i>
                     </span>
                 </li>               
-                <li class="m-t-30">                                        
+                <li class>                                        
                     <a href="{{ URL::route('administrator.message.index') }}" class="detailed">
                         <span class="title">Messages</span>                        
                     </a>

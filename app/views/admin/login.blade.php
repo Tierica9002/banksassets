@@ -24,7 +24,7 @@
         {{HTML::style('admin/css/pages-icons.css')}}
         {{HTML::style('admin/css/pages.css', ['class' => 'main-stylesheet'])}}
         <!--[if lte IE 9]>
-            <link href="pages/css/ie9.css" rel="stylesheet" type="text/css" />
+            <link href="css/ie9.css" rel="stylesheet" type="text/css" />
         <![endif]-->    
     </head>
     <body class="fixed-header   ">
@@ -38,9 +38,9 @@
                 <!-- START Background Caption-->
                 <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
                     <h2 class="semi-bold text-white">
-                        Pages make it easy to enjoy what matters the most in the life</h2>
+                        Welcome to the Banks &amp; Assets administrative panel.</h2>
                     <p class="small">
-                        images Displayed are solely for representation purposes only, All work copyright of respective owner, otherwise © 2013-2014 REVOX.
+                        Images displayed are solely for representation purposes only, All work copyright of respective owner, otherwise © 2015 Banks &amp; Assets.
                     </p>
                 </div>
                 <!-- END Background Caption-->
@@ -49,8 +49,8 @@
             <!-- START Login Right Container-->
             <div class="login-container bg-white">
                 <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
-                    <img src="{{asset('admin/img/logo.png')}}" alt="logo" data-src="{{asset('admin/img/logo.png')}}" data-src-retina="{{asset('admin/img/logo_2x.png')}}" width="78" height="22">
-                    <p class="p-t-35">Sign into your pages account</p>
+                    <img src="{{asset('admin/img/ba-logo-black-long.png')}}" alt="logo" data-src="{{asset('admin/img/ba-logo-black-long.png')}}" data-src-retina="{{asset('admin/img/ba-logo-black-long.png')}}" width="250" height="58">
+                    <p class="p-t-35">Sign into your B&amp;A account</p>
                     <!-- START Login Form -->                      
                     {{Form::open(['route' => 'administrator.dologin', 'method' => 'post', 'class' => 'p-t-15', 'role' => 'form'])}}
                     <!-- START Form Control-->
@@ -77,7 +77,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 text-right">
-                            <a href="#" class="text-info small">Help? Contact Support</a>
+                            <!-- <a href="#" class="text-info small">Help? Contact Support</a> -->
                         </div>
                     </div>
                     <!-- END Form Control-->
@@ -88,11 +88,11 @@
                     <div class="pull-bottom sm-pull-bottom">
                         <div class="m-b-30 p-r-80 sm-m-t-20 sm-p-r-15 sm-p-b-20 clearfix">
                             <div class="col-sm-3 col-md-2 no-padding">
-                                <img alt="" class="m-t-5" data-src="{{asset('admin/img/demo/pages_icon.png')}}" data-src-retina="{{asset('admin/img/demo/pages_icon_2x.png')}}" height="60" src="{{asset('admin/img/demo/pages_icon.png')}}" width="60">
+                                <img alt="" class="m-t-5" data-src="{{asset('admin/img/ba_icon.png')}}" data-src-retina="{{asset('admin/img/ba_icon_2x.png')}}" height="60" src="{{asset('admin/img/ba_icon.png')}}" width="60">
                             </div>
                             <div class="col-sm-9 no-padding m-t-10">
                                 <p><small>
-                                        Create a pages account. If you have a facebook account, log into it for this process. Sign in with <a href="#" class="text-info">Facebook</a> or <a href="#" class="text-info">Google</a></small>
+                                        New administrative accounts are solely created by the website owner.</small>
                                 </p>
                             </div>
                         </div>

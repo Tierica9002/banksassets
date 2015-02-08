@@ -187,8 +187,9 @@ body.dashboard .page-container {
 }
 
 .header .brand {
-  vertical-align: middle;
   width: 280px;
+  padding-left: 70px;
+  vertical-align: middle;
   text-align: center;
 }
 
@@ -2912,8 +2913,8 @@ Alternate buttons
 .btn-primary,
 .btn-primary:focus {
   color: #ffffff;
-  background-color: #6d5cae;
-  border-color: #6d5cae;
+  background-color: #1396E2;
+  border-color: #1396E2;
 }
 
 .btn-primary.active,
@@ -2930,8 +2931,8 @@ Alternate buttons
 .btn-primary.hover,
 .btn-primary:hover,
 .open .dropdown-toggle.btn-primary {
-  background-color: #8a7dbe;
-  border-color: #8a7dbe;
+  background-color: #4DAFE8;
+  border-color: #4DAFE8;
   color: #ffffff;
 }
 
@@ -3312,6 +3313,15 @@ Button Sizes
 .btn-cons {
   margin-right: 5px;
   min-width: 120px;
+}
+
+.table tbody tr td .btn-xs, 
+.table tbody tr td .btn-group-xs > .btn {
+  margin: 0;
+  padding: 2px 9px;
+  font-size: 10.5px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 /*
 Rounded buttons
@@ -8289,7 +8299,8 @@ div.cs-skin-slide .cs-options ul li.cs-selected span {
   color: #2c2c2c;
 }
 
-.table thead tr th:first-child {
+.table thead tr th:first-child,
+.table tbody tr td:first-child {
   padding-left: 18px !important;
 }
 
@@ -8302,8 +8313,12 @@ div.cs-skin-slide .cs-options ul li.cs-selected span {
   background: #fff;
   border-bottom: 1px solid rgba(230, 230, 230, 0.7);
   border-top: 0px;
-  padding: 20px;
+  padding: 5px 8px;
   font-size: 13.5px;
+}
+
+.table tbody tr td p:last-child {
+  margin-bottom: 0;
 }
 
 .table tbody tr td .btn {

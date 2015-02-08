@@ -88,13 +88,13 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="panel-body">
-                    <a href="{{ URL::route('administrator.user.create') }}">Add User</a>
+                    <a class="btn btn-default btn-cons m-b-10" href="{{ URL::route('administrator.user.create') }}"><i class="fa fa-plus-circle"></i> Add User</a>
                     @if (Session::has('message'))
                     <div style="font-size:20px; color: green;" class="alert-box success">
                         {{{ Session::get('message') }}}
                     </div>
                     @endif
-                    <table class="table table-hover demo-table-search" id="tableWithSearch">
+                    <table class="table table-hover">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -102,7 +102,7 @@
                                 <th>First Name</th>
                                 <th>Last Name</th>
                                 <th>Last Login</th>
-                                <th>Actions</th>
+                                <th class="text-center">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -123,10 +123,14 @@
                                 <td class="v-align-middle">
                                     <p>{{{ $user->last_login }}}</p>
                                 </td>
-                                <td class="v-align-middle">
-                                    <p><a href="{{ URL::route('administrator.user.edit', ['id'=> $user->id]) }}">Edit</a> ||  
+                                <td class="v-align-middle text-center">
+                                    <div class="btn-group btn-group-xs">
+                                        <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Edit</button>
+                                        <button type="button" class="btn btn-default"><i class="fa fa-remove"></i> Delete</button>
+                                    </div>
+                                    <p style="display: none;"><a href="{{ URL::route('administrator.user.edit', ['id'=> $user->id]) }}">Edit</a> ||  
                                     {{ Form::open(array('route' => array('administrator.user.destroy', $user->id  ), 'method' => 'delete')) }}
-                                        <button type="submit" class="btn btn-danger btn-mini">Delete</button>
+                                        <button style="display: none;" type="submit" class="btn btn-danger btn-mini">Delete</button>
                                     {{ Form::close() }}</p>
                                 </td>
                             </tr>  

@@ -187,8 +187,9 @@ body.dashboard .page-container {
 }
 
 .header .brand {
-  vertical-align: middle;
   width: 280px;
+  padding-left: 70px;
+  vertical-align: middle;
   text-align: center;
 }
 

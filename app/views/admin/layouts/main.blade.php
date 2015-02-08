@@ -69,7 +69,7 @@
                 <div class=" pull-left sm-table">
                     <div class="header-inner">
                         <div class="brand inline">
-                            <img src="{{asset('admin/img/logo.png')}}" alt="logo" data-src="{{asset('admin/img/logo.png')}}" data-src-retina="{{asset('admin/img/logo_2x.png')}}" width="93" height="25">
+                            <img src="{{asset('admin/img/ba-logo-black-long.png')}}" alt="logo" data-src="{{asset('admin/img/ba-logo-black-long.png')}}" data-src-retina="{{asset('admin/img/ba-logo-black-long.png')}}" width="173" height="40">
                         </div>
                         <!-- BEGIN NOTIFICATION DROPDOWN -->
                         <ul class="notification-list no-margin hidden-sm hidden-xs b-grey b-l b-r no-style p-l-30 p-r-20">

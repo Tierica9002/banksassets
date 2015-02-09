@@ -57,7 +57,7 @@
                     <div class="form-group form-group-default">
                         {{Form::label('username', 'Login')}}
                         <div class="controls">
-                            {{Form::text('username', null, ['placeholder' => 'User Name', 'class' => 'form-control', 'required' => ''])}}
+                            {{Form::text('username', null, ['placeholder' => 'Email', 'class' => 'form-control', 'required' => ''])}}
                         </div>
                     </div>
                     <!-- END Form Control-->

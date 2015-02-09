@@ -89,6 +89,7 @@
                 </div>
                 <div class="panel-body">
                     <a class="btn btn-default btn-cons m-b-10" href="{{ URL::route('administrator.user.create') }}"><i class="fa fa-plus-circle"></i> Add Contact</a>
+                    <a class="btn btn-default btn-cons m-b-10" href="{{ URL::route('administrator.contact.create') }}"><i class="fa fa-plus-circle"></i> Create Excel File</a>
                     @if (Session::has('message'))
                     <div style="font-size:20px; color: green;" class="alert-box success">
                         {{{ Session::get('message') }}}

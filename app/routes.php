@@ -18,8 +18,9 @@ Route::filter('sentry_is_logged', function() {
     }
 });
 Route::get('/market-practice', function(){
-    echo 'shm';
-    return View::make('frontend.contact');
+    $context_data['body_class'] = 'page-sub-page page-blog-detail';
+    
+    return View::make('frontend.market-practice',array('context_data' => $context_data));
 });
 Route::get('/', 'HomeController@index');
 Route::get('/about', array('as' => 'main.about', 'uses' => 'HomeController@about') );

@@ -17,11 +17,14 @@ Route::filter('sentry_is_logged', function() {
         return Redirect::route('administrator.dashboard');
     }
 });
-
+Route::get('/market-practice', function(){
+    echo 'shm';
+    return View::make('frontend.contact');
+});
 Route::get('/', 'HomeController@index');
 Route::get('/about', array('as' => 'main.about', 'uses' => 'HomeController@about') );
 Route::get('/contact', array('as' => 'main.contact', 'uses' => 'HomeController@contact') );
-Route::post('/message', array('as' => 'main.sendmessage', 'uses' => 'UserMessageController@store'));
+Route::post('/message', array('as' => 'main.sendmessage', 'uses' => 'ContactController@store'));
 
 Route::group(array('prefix' => 'administrator'), function() {
     Route::get('/', array('as' => 'administrator.dashboard', 'uses' => 'AdminHomeController@index'));
@@ -29,15 +32,12 @@ Route::group(array('prefix' => 'administrator'), function() {
     Route::get('/logout', array( 'as'=> 'administrator.logout', 'uses' => 'AdminHomeController@logout'));
     Route::post('/login', ['as' => 'administrator.dologin', 'uses' => 'AdminHomeController@doLogin']);
     Route::get('/register', array( 'as'=> 'administrator.register', 'uses' => 'AdminHomeController@register'));
-    Route::get('/serve-emails', array('as' => 'administrator.serveemails', 'uses' => 'UserMessageController@serveemails'));
+    Route::get('/serve-emails', array('as' => 'administrator.serveemails', 'uses' => 'ContactController@serveemails'));
+    Route::get('/messages', array('as' => 'administrator.messages', 'uses' => 'ContactController@serveAsMessages'));
     Route::resource('user', 'UserController');
-    Route::resource('complex', 'ComplexController');
-    Route::resource('message', 'UserMessageController');
+    Route::resource('complex', 'ComplexController');    
+    Route::resource('contact', 'ContactController');
     
-//    Route::get('/show-users', ['as' => 'administator.show.users', 'uses' => 'UserController@index']);
-//    Route::get('/edit/{id}', ['as' => 'administator.edit.user', 'uses' => 'UserController@edit']);
-//    Route::get('/update/{id}', ['as' => 'administator.update.user', 'uses' => 'UserController@update']);
-//    Route::get('/delete/{id}', ['as' => 'administator.delete.user', 'uses' => 'UserController@destroy']);   
 });
 
 Route::when('administrator*', 'sentry_is_logged');

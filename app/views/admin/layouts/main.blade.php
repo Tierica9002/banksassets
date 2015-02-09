@@ -27,8 +27,7 @@
         {{HTML::style('admin/plugins/switchery/css/switchery.min.css')}}
         {{HTML::style('admin/plugins/jquery-datatable/media/css/jquery.dataTables.css')}}
         {{HTML::style('admin/plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css')}}
-        {{HTML::style('admin/plugins/datatables-responsive/css/datatables.responsive.css')}}
-
+        {{HTML::style('admin/plugins/datatables-responsive/css/datatables.responsive.css')}}        
         <!-- BEGIN Pages CSS-->
         {{HTML::style('admin/css/pages-icons.css')}}
         {{HTML::style('admin/css/pages.css', ['class' => 'main-stylesheet'])}}
@@ -145,7 +144,29 @@
             </div>
             <!-- END HEADER -->
             <!-- END PAGE HEADER WRAPPER -->
-            @yield('content')                
+            @yield('content')           
+                <!-- START COPYRIGHT -->
+    <!-- START CONTAINER FLUID -->
+    <div class="container-fluid container-fixed-lg footer">
+                <div class="copyright sm-text-center">
+                    <p class="small no-margin pull-left sm-pull-reset">
+                        <span class="hint-text">Copyright © 2014</span>
+                        <span class="font-montserrat">BANKS &amp; ASSETS</span>.
+                        <span class="hint-text">All rights reserved.</span>
+                        <!-- <span class="sm-block"><a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a> -->
+                        </span>
+                    </p>
+                    <!-- <p class="small no-margin pull-right sm-pull-reset">
+                        <a href="#">Hand-crafted</a> 
+                        <span class="hint-text">&amp; Made with Love ®</span>
+                    </p> -->
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+    <!-- END COPYRIGHT -->
+</div>
+<!-- END PAGE CONTENT WRAPPER -->    
+</div>
             <!--START QUICKVIEW -->
             <div id="quickview" class="quickview-wrapper" data-pages="quickview">
                 <!-- Nav tabs -->
@@ -631,7 +652,8 @@
             <!-- END CORE TEMPLATE JS -->
 
             <!-- BEGIN PAGE LEVEL JS -->
-            {{HTML::script('admin/js/scripts.js')}}
+            {{HTML::script('admin/js/form_elements.js')}}
+            {{HTML::script('admin/js/scripts.js')}}            
             <!-- END PAGE LEVEL JS -->
     </body>
 </html>

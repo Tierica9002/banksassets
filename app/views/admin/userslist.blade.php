@@ -124,14 +124,16 @@
                                     <p>{{{ $user->last_login }}}</p>
                                 </td>
                                 <td class="v-align-middle text-center">
-                                    <div class="btn-group btn-group-xs">
-                                        <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Edit</button>
-                                        <button type="button" class="btn btn-default"><i class="fa fa-remove"></i> Delete</button>
-                                    </div>
-                                    <p style="display: none;"><a href="{{ URL::route('administrator.user.edit', ['id'=> $user->id]) }}">Edit</a> ||  
                                     {{ Form::open(array('route' => array('administrator.user.destroy', $user->id  ), 'method' => 'delete')) }}
+                                    <div class="btn-group btn-group-xs">
+                                        <a href="{{ URL::route('administrator.user.edit', ['id'=> $user->id]) }}" type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Edit</a>                                        
+                                        <button type="submit" class="btn btn-default"><i class="fa fa-remove"></i> Delete</button>                                        
+                                    </div>
+                                    {{ Form::close() }}
+                                    <p style="display: none;"><a href="{{ URL::route('administrator.user.edit', ['id'=> $user->id]) }}">Edit</a> ||  
+                                    
                                         <button style="display: none;" type="submit" class="btn btn-danger btn-mini">Delete</button>
-                                    {{ Form::close() }}</p>
+                                    
                                 </td>
                             </tr>  
                             @endforeach
@@ -143,24 +145,4 @@
         </div>          
     </div>
     <!-- END PAGE CONTENT -->
-    <!-- START COPYRIGHT -->
-    <!-- START CONTAINER FLUID -->
-    <div class="container-fluid container-fixed-lg footer">
-        <div class="copyright sm-text-center">
-            <p class="small no-margin pull-left sm-pull-reset">
-                <span class="hint-text">Copyright © 2014 </span>
-                <span class="font-montserrat">REVOX</span>.
-                <span class="hint-text">All rights reserved. </span>
-                <span class="sm-block"><a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a></span>
-            </p>
-            <p class="small no-margin pull-right sm-pull-reset">
-                <a href="#">Hand-crafted</a> <span class="hint-text">&amp; Made with Love ®</span>
-            </p>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <!-- END COPYRIGHT -->
-</div>
-<!-- END PAGE CONTENT WRAPPER -->    
-</div>
 @stop

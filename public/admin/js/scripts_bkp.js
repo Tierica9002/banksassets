@@ -1,13 +1,7 @@
-(function($) {
-
-    'use strict';
-
-    $(document).ready(function() {
+ $(document).ready(function() {
         // Initializes search overlay plugin.
         // Replace onSearchSubmit() and onKeyEnter() with 
         // your logic to perform a search and display results
-        $(".list-view-wrapper").scrollbar();
-
         $('[data-pages="search"]').search({
             searchField: '#overlay-search',
             closeButton: '.overlay-close',
@@ -20,11 +14,9 @@
                 console.log("Live search for: " + searchString);
                 var searchField = $('#overlay-search');
                 var searchResults = $('.search-results');
-
                 clearTimeout($.data(this, 'timer'));
                 searchResults.fadeOut("fast");
                 var wait = setTimeout(function() {
-
                     searchResults.find('.result-name').each(function() {
                         if (searchField.val().length != 0) {
                             $(this).html(searchField.val());
@@ -33,10 +25,6 @@
                     });
                 }, 500);
                 $(this).data('timer', wait);
-
             }
-        })
-
-    });
-
-})(window.jQuery);
+        });
+    })

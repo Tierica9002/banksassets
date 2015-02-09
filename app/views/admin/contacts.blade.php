@@ -1,4 +1,4 @@
-@extends('layouts.admin.main')
+@extends('admin.layouts.main')
 @section('content')
 <!-- START PAGE CONTENT WRAPPER -->
 <div class="page-content-wrapper">
@@ -65,9 +65,9 @@
                     <!-- START BREADCRUMB -->
                     <ul class="breadcrumb">
                         <li>
-                            <p>Users</p>
+                            <p>Contacts</p>
                         </li>
-                        <li><a href="#" class="active">List Users</a>
+                        <li><a href="#" class="active">List Contacts</a>
                         </li>
                     </ul>
                     <!-- END BREADCRUMB -->                
@@ -88,40 +88,55 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="panel-body">
-                    <a href="{{ URL::route('administrator.user.create') }}">Add User</a>
+                    <a class="btn btn-default btn-cons m-b-10" href="{{ URL::route('administrator.user.create') }}"><i class="fa fa-plus-circle"></i> Add Contact</a>
                     @if (Session::has('message'))
                     <div style="font-size:20px; color: green;" class="alert-box success">
                         {{{ Session::get('message') }}}
                     </div>
                     @endif
-                    <table class="table table-hover demo-table-search" id="tableWithSearch">
+                    <table class="table table-hover">
                         <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>Name</th>
                                 <th>Email</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Last Login</th>
-                                <th>Actions</th>
+                                <th>Phone</th>
+                                <th>Source</th>
+                                <th>Sent At</th>
+                                <th class="text-center">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($contacts as $contact)                            
                             <tr>
                                 <td class="v-align-middle semi-bold">
+                                    <p>{{{ $contact->id }}}</p>
                                 </td>
                                 <td class="v-align-middle">
+                                    <p>{{{ $contact->user_name }}}</p>
                                 </td>
                                 <td class="v-align-middle">
+                                    <p>{{{ $contact->user_email }}}</p>
                                 </td>
                                 <td class="v-align-middle">
+                                    <p>{{{ $contact->user_phone }}}</p>
                                 </td>
                                 <td class="v-align-middle">
-                                  
+                                    <p>{{{ $contact->source }}}</p>
                                 </td>
                                 <td class="v-align-middle">
-<!--                               
+                                    <p>{{{ (string) $contact->created_at }}}</p>
+                                </td>
+                                <td class="v-align-middle text-center">
+                                    {{ Form::open(array('route' => array('administrator.contact.destroy', $contact->id), 'method' => 'delete')) }}
+                                    <div class="btn-group btn-group-xs">
+                                        <a href="{{ URL::route('administrator.contact.edit', ['id'=> $contact->id]) }}" type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Edit</a>                                        
+                                        <button type="submit" class="btn btn-default"><i class="fa fa-remove"></i> Delete</button>                                        
+                                    </div>
+                                    {{ Form::close() }}                                                                        
                                 </td>
                             </tr>  
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -129,5 +144,5 @@
             <!-- END PANEL -->
         </div>          
     </div>
-    <!-- END PAGE CONTENT -->    
+    <!-- END PAGE CONTENT -->
 @stop

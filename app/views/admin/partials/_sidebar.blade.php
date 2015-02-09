@@ -36,10 +36,17 @@
                     </span>
                 </li>               
                 <li class>                                        
-                    <a href="{{ URL::route('administrator.message.index') }}" class="detailed">
+                    <a href="{{ URL::route('administrator.messages') }}" class="detailed">
                         <span class="title">Messages</span>                        
                     </a>
                     <span class="icon-thumbnail "><i class="pg-mail"></i>
+                    </span>
+                </li>               
+                <li class>                                        
+                    <a href="{{ URL::route('administrator.contact.index') }}" class="detailed">
+                        <span class="title">Contacts</span>                        
+                    </a>
+                    <span class="icon-thumbnail "><i class="fa fa-user"></i>
                     </span>
                 </li>               
             </ul>

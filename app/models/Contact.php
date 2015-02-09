@@ -11,6 +11,6 @@
  *
  * @author Tierica
  */
-class UserMessage extends Eloquent{
+class Contact extends Eloquent{
      protected $table = 'user_messages';
 }

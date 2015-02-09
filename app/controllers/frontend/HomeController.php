@@ -28,7 +28,7 @@ class HomeController extends BaseController {
         return View::make('frontend.about',array('context_data' => $context_data));
     }
 
-    public function contact() {
+    public function contact() {        
         $context_data = [];
         $context_data['body_class'] = 'page-sub-page page-contact';
         $context_data['scripts'] = array('');        

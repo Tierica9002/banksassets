@@ -115,8 +115,9 @@ class UserController extends \BaseController {
     public function destroy($id) {
         $user = Sentry::findUserById($id);
         $user->delete();
-        
+
         return Redirect::route('administrator.user.index')->withMessage('User deleted.');
     }
+   
 
 }

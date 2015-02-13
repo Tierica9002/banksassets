@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'banksassets',
-			'username'  => 'root',
-			'password'  => '',
+			'database'  => 'banks_assets',
+			'username'  => 'banks_assets_usr',
+			'password'  => 'banks_pass123$%',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

@@ -6,6 +6,9 @@
 /banksassets
 /nbproject
 /build
+index.html
+/public/.htpasswd
+/public/.htaccess
 README.md
 readme.md
 composer.phar

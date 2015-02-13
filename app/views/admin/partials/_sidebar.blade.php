@@ -27,14 +27,7 @@
                 </a>
                 <span class="icon-thumbnail "><i class="fa fa-user"></i>
                 </span>
-            </li>           
-            <li class>                                        
-                <a href="{{ URL::route('administrator.complex.index') }}" class="detailed">
-                    <span class="title">Complexes</span>                        
-                </a>
-                <span class="icon-thumbnail "><i class="fa fa-building"></i>
-                </span>
-            </li>               
+            </li>                                 
             <li class>                                        
                 <a href="{{ URL::route('administrator.messages') }}" class="detailed">
                     <span class="title">Messages</span>                        
@@ -60,7 +53,7 @@
                     </li>
                     <li class="">
                         <a href="typography.html">Lands</a>
-                        <span class="icon-thumbnail">t</span>
+                        <span class="icon-thumbnail">l</span>
                     </li>
                     <li class="">
                         <a href="icons.html">Offices</a>

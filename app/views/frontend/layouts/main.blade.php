@@ -56,7 +56,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <div class="navbar-brand nav" id="brand">
-                                <a href="#te-duce-la-homepage"><img src="{{asset('frontend/img/ba-logo-blue-long.png')}}" alt="brand"></a>
+                                <a href="{{ URL::route('homepage') }}"><img src="{{asset('frontend/img/ba-logo-blue-long.png')}}" alt="brand"></a>
                             </div>
                         </div>
                         <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">

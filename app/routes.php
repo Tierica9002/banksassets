@@ -22,7 +22,7 @@ Route::get('/market-practice', function(){
     
     return View::make('frontend.market-practice',array('context_data' => $context_data));
 });
-Route::get('/', 'HomeController@index');
+Route::get('/', array('as' => 'homepage', 'uses' => 'HomeController@index'));
 Route::get('/about', array('as' => 'main.about', 'uses' => 'HomeController@about') );
 Route::get('/contact', array('as' => 'main.contact', 'uses' => 'HomeController@contact') );
 Route::post('/message', array('as' => 'main.sendmessage', 'uses' => 'ContactController@store'));

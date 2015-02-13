@@ -6,7 +6,7 @@
     <div class="sidebar-header">
         <img src="{{asset('admin/img/ba-logo-white-long.png')}}" alt="logo" class="brand" data-src="{{asset('admin/img/ba-logo-white-long.png')}}" data-src-retina="{{asset('admin/img/ba-logo-white-long.png')}}" width="108" height="25">
         <div class="sidebar-header-controls">
-            <button data-pages-toggle="#appMenu" class="btn btn-xs sidebar-slide-toggle btn-link m-l-20" type="button"><i class="fa fa-angle-down fs-16"></i></button>
+            <button data-pages-toggle="#appMenu" class="btn btn-xs sidebar-slide-toggle btn-link" type="button"><i class="fa fa-angle-down fs-16"></i></button>
             <button data-toggle-pin="sidebar" class="btn btn-link visible-lg-inline" type="button"><i class="fa fs-12"></i></button>
         </div>
     </div>

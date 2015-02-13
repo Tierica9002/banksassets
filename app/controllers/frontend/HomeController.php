@@ -16,7 +16,7 @@ class HomeController extends BaseController {
 
     public function index() {
         $context_data = [];
-        $context_data['body_class'] = 'page-sub-page page-blog-detail';
+        $context_data['body_class'] = 'page-homepage navigation-fixed-top page-slider horizontal-search';
         
         return View::make('frontend.index',array('context_data' => $context_data));
     }

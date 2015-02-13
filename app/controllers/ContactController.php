@@ -19,46 +19,7 @@ class ContactController extends \BaseController {
      * @return Response
      */
     public function create() {
-        Excel::create('ExcelExport', function ($excel) {
-
-            $excel->sheet('Sheetname', function ($sheet) {
-
-                // first row styling and writing content
-                $sheet->mergeCells('A1:W1');
-                $sheet->row(1, function ($row) {
-                    $row->setFontFamily('Comic Sans MS');
-                    $row->setFontSize(30);
-                });
-
-                $sheet->row(1, array('Some big header here'));
-
-                // second row styling and writing content
-                $sheet->row(2, function ($row) {
-
-                    // call cell manipulation methods
-                    $row->setFontFamily('Comic Sans MS');
-                    $row->setFontSize(15);
-                    $row->setFontWeight('bold');
-                });
-
-                $sheet->row(2, array('Something else here'));
-
-                // getting data to display - in my case only one record
-                $users = User::get()->toArray();
-
-                // setting column names for data - you can of course set it manually
-                $sheet->appendRow(array_keys($users[0])); // column names
-                // getting last row number (the one we already filled and setting it to bold
-                $sheet->row($sheet->getHighestRow(), function ($row) {
-                    $row->setFontWeight('bold');
-                });
-
-                // putting users data as next rows
-                foreach ($users as $user) {
-                    $sheet->appendRow($user);
-                }
-            });
-        })->export('xls');
+        return View::make('admin.addcontact');
     }
 
     /**
@@ -70,7 +31,7 @@ class ContactController extends \BaseController {
         $rules = array(
             'user_name' => array('required'),
             'user_email' => array('required'),
-            'user_message' => array('required')
+            'user_text' => array('required')
         );
 
         // pass input to validator
@@ -78,22 +39,33 @@ class ContactController extends \BaseController {
 
         // test if input fails
         if ($validator->fails()) {
-            return Redirect::route('main.contact')->withErrors($validator)->withInput();
+            if (Input::get('is-admin') == 'true') {
+                return Redirect::route('administrator.contact.create')->withErrors($validator)->withInput();
+            } else {
+                return Redirect::route('main.contact')->withErrors($validator)->withInput();
+            }
         }
+
 
         $name = Input::get('user_name');
         $email = Input::get('user_email');
         $phone = Input::get('user_phone');
-        $user_message = Input::get('user_message');
+        $user_message = Input::get('user_text');
+        $source = Input::get('source');
 
         $message = new Contact();
         $message->user_name = $name;
         $message->user_email = $email;
         $message->user_phone = $phone;
         $message->user_text = $user_message;
+        $message->source = $source;
         $message->save();
 
-        return Redirect::route('main.contact')->withMessage('Message has been sent!');
+        if (Input::get('is-admin') == 'true') {
+            return Redirect::route('administrator.contact.index')->withMessage('Contact has been added!');
+        } else {
+            return Redirect::route('main.contact')->withMessage('Message has been sent!');
+        }
     }
 
     /**
@@ -126,7 +98,7 @@ class ContactController extends \BaseController {
     public function update($id) {
         $rules = array(
             'user_name' => array('required'),
-            'user_email' => array('required')            
+            'user_email' => array('required')
         );
 
         $validator = Validator::make(Input::all(), $rules);
@@ -140,7 +112,7 @@ class ContactController extends \BaseController {
         $user->user_name = Input::get('user_name');
         $user->user_email = Input::get('user_email');
         $user->user_phone = Input::get('user_phone');
-        $user->user_text  = Input::get('user_text');
+        $user->user_text = Input::get('user_text');
         $user->save();
 
         return Redirect::route('administrator.contact.index')->withMessage('Contact updated');
@@ -187,6 +159,35 @@ class ContactController extends \BaseController {
         }
 
         return Response::json($returnJson);
+    }
+
+    public function createXls() {
+        Excel::create('ExcelExport', function ($excel) {
+
+            $excel->sheet('Sheetname', function ($sheet) {
+
+                // first row styling and writing content
+                $ids = explode(',', Input::get('contact-ids'));
+                // getting data to display - in my case only one record
+
+                $contacts = Contact::whereIn('id', $ids)->get()->toArray();
+
+
+                // setting column names for data - you can of course set it manually
+//                $sheet->appendRow(array_keys($users[0])); // column names
+                // getting last row number (the one we already filled and setting it to bold
+                $sheet->row($sheet->getHighestRow(), function ($row) {
+                    $row->setFontWeight('bold');
+                });
+                    $sheet->appendRow(array('Id', 'Nume', 'Email', 'Nr. Telefon', 'Mesaj', 'Data trimitere', 'Sursa'));
+                // putting users data as next rows
+                foreach ($contacts as $contact) {
+                    unset($contact['message_read']);                    
+                    unset($contact['updated_at']);                                        
+                    $sheet->appendRow($contact);
+                }
+            });
+        })->export('xls');
     }
 
 }

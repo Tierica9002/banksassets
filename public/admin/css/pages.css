@@ -7643,6 +7643,7 @@ https://github.com/Waxolunist/bootstrap3-wysihtml5-bower
 .wysiwyg5-wrapper .wysihtml5-toolbar > li {
   margin: 0;
   padding: 0;
+  display: inline-block;
 }
 
 .wysiwyg5-wrapper .wysiwyg {

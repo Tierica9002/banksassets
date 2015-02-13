@@ -35,8 +35,27 @@
                 $(this).data('timer', wait);
 
             }
-        })
-
+        });
+        if ($('#create-xls').length > 0) {
+            var idsArr = [];
+            
+            $('.contact-cb').click(function() {
+                var idsStr = '';
+                if ($(this).is(':checked')) {
+                    idsArr.push($(this).val());
+                } else {
+                    var index = idsArr.indexOf($(this).val());
+                    idsArr.splice(index, 1);
+                }                
+                for (var i=0; i<idsArr.length; i++) {                    
+                    idsStr += idsArr[i] + ',';
+                }
+                
+               
+                idsStr = idsStr.substring(0, idsStr.length - 1);
+                $('#contact-ids').val(idsStr);
+            });
+        }
     });
 
 })(window.jQuery);

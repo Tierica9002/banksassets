@@ -73,7 +73,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="form-contact-message">Your Message<em>*</em></label>
-                                    <textarea class="form-control" id="form-contact-message" rows="8" name="user_message" required></textarea>
+                                    <textarea class="form-control" id="form-contact-message" rows="8" name="user_text" required></textarea>
                                 </div><!-- /.form-group -->
                             </div><!-- /.col-md-12 -->
                         </div><!-- /.row -->
@@ -85,6 +85,7 @@
                                 {{{ Session::get('message') }}}                            
                             @endif
                         </div>
+                        <input type="hidden" name="source" value="Contact Form" />
                         {{ Form::close() }}<!-- /#form-contact -->
                     </section>
                 </section><!-- /#agent-detail -->

@@ -38,6 +38,7 @@ Route::group(array('prefix' => 'administrator'), function() {
     Route::resource('user', 'UserController');
     Route::resource('complex', 'ComplexController');    
     Route::resource('contact', 'ContactController');
+    Route::post('/create-xls', array('as' => 'administrator.createxls', 'uses' => 'ContactController@createXls'));
     
 });
 

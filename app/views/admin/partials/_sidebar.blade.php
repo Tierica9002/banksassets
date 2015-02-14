@@ -40,7 +40,7 @@
                 <a href="{{ URL::route('administrator.contact.index') }}" class="detailed">
                     <span class="title">Contacts</span>                        
                 </a>
-                <span class="icon-thumbnail "><i class="fa fa-user"></i>
+                <span class="icon-thumbnail "><i class="pg-contact_book"></i>
                 </span>
             </li> 
             <li class="">

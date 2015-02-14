@@ -91,7 +91,7 @@
                     {{ Form::open(['route' => ['administrator.createxls'],'method' => 'post', 'class' => 'form-inline', 'role' => 'form', 'autocomplete' => 'off']) }}
                     <a class="btn btn-default btn-cons m-b-10" href="{{ URL::route('administrator.contact.create') }}"><i class="fa fa-plus-circle"></i> Add Contact</a>
                     <input type="hidden" id="contact-ids" name="contact-ids" value="" />
-                    <button id="create-xls" class="btn btn-default btn-cons m-b-10"><i class="fa fa-plus-circle"></i> Create Excel File</button>
+                    <button id="create-xls" class="btn btn-default btn-cons m-b-10"><i class="fa fa-file-excel-o"></i> Export to Excel</button>
                     {{Form::close()}}
                     @if (Session::has('message'))
                     <div style="font-size:20px; color: green;" class="alert-box success">

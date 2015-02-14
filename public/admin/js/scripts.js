@@ -1,7 +1,5 @@
 (function($) {
 
-    'use strict';
-
     $(document).ready(function() {
         // Initializes search overlay plugin.
         // Replace onSearchSubmit() and onKeyEnter() with 
@@ -54,6 +52,13 @@
                
                 idsStr = idsStr.substring(0, idsStr.length - 1);
                 $('#contact-ids').val(idsStr);
+            });
+            $('#check-all').click(function(){
+                if ($(this).is(':checked')) {
+                    $('.contact-cb').prop('checked', true);
+                } else {
+                    $('.contact-cb').prop('checked', false);
+                }
             });
         }
     });

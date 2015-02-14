@@ -101,7 +101,7 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th> </th>
+                                <th> <input type="checkbox" id="check-all" /> </th>
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Email</th>

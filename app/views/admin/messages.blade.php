@@ -73,7 +73,7 @@
                 <div class="email-content">
                   <div class="email-content-header">
                     <div class="thumbnail-wrapper d48 circular bordered">
-                      <img width="40" height="40" alt="" data-src-retina="assets/img/profiles/avatar2x.jpg" data-src="assets/img/profiles/avatar.jpg" src="assets/img/profiles/avatar2x.jpg">
+                      <img width="40" height="40" alt="" data-src-retina="{{asset('admin/img/profiles/avatar2x.jpg')}}" data-src="{{asset('admin/img/profiles/avatar.jpg')}}" src="{{asset('admin/img/profiles/avatar.jpg')}}">
                     </div>
                     <div class="sender inline m-l-10">
                       <p class="name no-margin bold">
@@ -82,10 +82,10 @@
                       <p class="datetime no-margin">Today at 1:23pm</p>
                     </div>
                     <div class="clearfix"></div>
-                    <div class="subject m-t-20 m-b-20 semi-bold">
+                    <div class="subject m-t-20 m-b-20 bold">
                       Pages compatibility level Increased,compatible for everyone!. Exclusively on themeforest.
                     </div>
-                    <div class="fromto">
+                    <!-- <div class="fromto">
                       <div class="pull-left">
                         <div class="btn-group dropdown-default">
                           <a class="btn dropdown-toggle btn-small btn-rounded" data-toggle="dropdown" href="#">
@@ -106,7 +106,7 @@
                           <span class=" small-text">johnsmith@skyace.com</span>
                         </label>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="clearfix"></div>
                   <div class="email-content-body m-t-20">

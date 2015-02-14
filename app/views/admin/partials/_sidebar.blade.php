@@ -30,7 +30,8 @@
             </li>                                 
             <li class>                                        
                 <a href="{{ URL::route('administrator.messages') }}" class="detailed">
-                    <span class="title">Messages</span>                        
+                    <span class="title">Messages</span>
+                    <span class="details">{{$messages_counter}} Unread</span>                      
                 </a>
                 <span class="icon-thumbnail "><i class="pg-mail"></i>
                 </span>
@@ -39,13 +40,15 @@
                 <a href="{{ URL::route('administrator.contact.index') }}" class="detailed">
                     <span class="title">Contacts</span>                        
                 </a>
-                <span class="icon-thumbnail "><i class="fa fa-user"></i>
+                <span class="icon-thumbnail "><i class="pg-contact_book"></i>
                 </span>
             </li> 
             <li class="">
-                <a href="javascript:;"><span class="title">Assets</span>
-                    <span class=" arrow"></span></a>
-                <span class="icon-thumbnail">A</span>
+                <a href="javascript:;">
+                    <span class="title">Assets</span>
+                    <span class=" arrow"></span>
+                </a>
+                <span class="icon-thumbnail"><i class="fa fa-building"></i></span>
                 <ul class="sub-menu">
                     <li class="">
                         <a href="color.html">Villas</a>

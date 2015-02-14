@@ -6,7 +6,7 @@ class UserController extends \BaseController {
         $this->beforeFilter('csrf', array('on' => ['post', 'put', 'delete']));
 
         $messages_counter = Contact::where('message_read', '=', 0)->count();
-        View::share('messages_count', $messages_counter);
+        View::share('messages_counter', $messages_counter);
     }
 
     /**

@@ -17,11 +17,7 @@ Route::filter('sentry_is_logged', function() {
         return Redirect::route('administrator.dashboard');
     }
 });
-Route::get('/market-practice', function(){
-    $context_data['body_class'] = 'page-sub-page page-blog-detail';
-    
-    return View::make('frontend.market-practice',array('context_data' => $context_data));
-});
+Route::get('/market-practice', array('as' => 'main.marketpractice', 'uses' => 'HomeController@marketPractice'));
 Route::get('/', array('as' => 'homepage', 'uses' => 'HomeController@index'));
 Route::get('/about', array('as' => 'main.about', 'uses' => 'HomeController@about') );
 Route::get('/contact', array('as' => 'main.contact', 'uses' => 'HomeController@contact') );

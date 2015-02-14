@@ -44,9 +44,11 @@
                 </span>
             </li> 
             <li class="">
-                <a href="javascript:;"><span class="title">Assets</span>
-                    <span class=" arrow"></span></a>
-                <span class="icon-thumbnail">A</span>
+                <a href="javascript:;">
+                    <span class="title">Assets</span>
+                    <span class=" arrow"></span>
+                </a>
+                <span class="icon-thumbnail"><i class="fa fa-building"></i></span>
                 <ul class="sub-menu">
                     <li class="">
                         <a href="color.html">Villas</a>

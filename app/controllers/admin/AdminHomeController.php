@@ -16,6 +16,9 @@ class AdminHomeController extends BaseController {
 
     public function __construct() {
         $this->beforeFilter('csrf', array('on' => ['post', 'put', 'delete']));
+        
+        $messages_counter = Contact::where('message_read', '=', 0)->count();        
+        View::share('messages_count', $messages_counter);
     }
 
     public function index() {

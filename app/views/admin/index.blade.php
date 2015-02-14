@@ -13,7 +13,7 @@
                             <!-- START BREADCRUMB -->
                             <ul class="breadcrumb">
                                 <li>
-                                    <p>Pages</p>
+                                    <p>Pages{{{$messages_count}}}</p>
                                 </li>
                                 <li><a href="#" class="active">Barebone template</a>
                                 </li>

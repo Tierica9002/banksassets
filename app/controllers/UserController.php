@@ -2,6 +2,13 @@
 
 class UserController extends \BaseController {
 
+    public function __construct() {
+        $this->beforeFilter('csrf', array('on' => ['post', 'put', 'delete']));
+
+        $messages_counter = Contact::where('message_read', '=', 0)->count();
+        View::share('messages_count', $messages_counter);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -118,6 +125,5 @@ class UserController extends \BaseController {
 
         return Redirect::route('administrator.user.index')->withMessage('User deleted.');
     }
-   
 
 }

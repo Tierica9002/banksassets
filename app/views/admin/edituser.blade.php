@@ -18,6 +18,9 @@
                 <div class="col-lg-12 col-md-12 ">
                     <!-- START PANEL -->
                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">Edit User Form</div>
+                        </div>
                         <div class="panel-body">
                             {{ Form::open(['route' => ['administrator.user.update', $user->id],'method' => 'put', 'role' => 'form', 'autocomplete' => 'off']) }}
                                 <div class="row clearfix">

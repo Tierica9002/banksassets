@@ -2,6 +2,13 @@
 
 class ContactController extends \BaseController {
 
+    public function __construct() {
+        $this->beforeFilter('csrf', array('on' => ['post', 'put', 'delete']));
+
+        $messages_counter = Contact::where('message_read', '=', 0)->count();
+        View::share('messages_counter', $messages_counter);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -179,11 +186,11 @@ class ContactController extends \BaseController {
                 $sheet->row($sheet->getHighestRow(), function ($row) {
                     $row->setFontWeight('bold');
                 });
-                    $sheet->appendRow(array('Id', 'Nume', 'Email', 'Nr. Telefon', 'Mesaj', 'Data trimitere', 'Sursa'));
+                $sheet->appendRow(array('Id', 'Nume', 'Email', 'Nr. Telefon', 'Mesaj', 'Data trimitere', 'Sursa'));
                 // putting users data as next rows
                 foreach ($contacts as $contact) {
-                    unset($contact['message_read']);                    
-                    unset($contact['updated_at']);                                        
+                    unset($contact['message_read']);
+                    unset($contact['updated_at']);
                     $sheet->appendRow($contact);
                 }
             });

@@ -49,10 +49,9 @@
                                 <div class="row">
                                     <div class="col-sm-6 col-sm-offset-3">
                                         <button class="btn btn-success" type="submit">Save</button>
-                                        <span>or </span><a href="#">Cancel</a>
+                                        <span>or </span><a href="{{ URL::route('administrator.user.index') }}">Cancel</a>
                                     </div>
-                                </div>
-                                <button class="btn btn-primary" type="submit">Edit user</button>
+                                </div>                                
                                 {{ $errors->first() }}
                             {{Form::close()}}
                         </div>

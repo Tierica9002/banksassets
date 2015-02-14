@@ -146,14 +146,14 @@ class ContactController extends \BaseController {
         foreach ($messages as $message) {
             $returnJson['emails'][0]['list'][$k] = [
                 'id' => $message->id,
-                'subject' => 'Contact form request',
+                'subject' => 'Contact Form',
                 'body' => $message->user_text,
                 'to' => [$message->user_email],
                 'time' => (string) $message->created_at,
                 'datetime' => (string) $message->created_at,
                 'from' => $message->user_name,
-                'dp' => 'jepiimici.jpg',
-                'dpRetina' => 'jepiimari.jpg'
+                'dp' => asset('admin/img/profiles/avatar.jpg'),
+                'dpRetina' => asset('admin/img/profiles/avatar2x.jpg')
             ];
             $k++;
         }

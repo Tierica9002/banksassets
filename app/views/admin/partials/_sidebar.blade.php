@@ -30,7 +30,8 @@
             </li>                                 
             <li class>                                        
                 <a href="{{ URL::route('administrator.messages') }}" class="detailed">
-                    <span class="title">Messages</span>                        
+                    <span class="title">Messages</span>
+                    <span class="details">{{$messages_counter}} Unread</span>                      
                 </a>
                 <span class="icon-thumbnail "><i class="pg-mail"></i>
                 </span>

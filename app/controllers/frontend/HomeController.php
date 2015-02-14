@@ -17,22 +17,27 @@ class HomeController extends BaseController {
     public function index() {
         $context_data = [];
         $context_data['body_class'] = 'page-homepage navigation-fixed-top page-slider horizontal-search';
-        
-        return View::make('frontend.index',array('context_data' => $context_data));
+
+        return View::make('frontend.index', array('context_data' => $context_data));
     }
 
     public function about() {
         $context_data = [];
         $context_data['body_class'] = 'page-sub-page page-about-us';
-        
-        return View::make('frontend.about',array('context_data' => $context_data));
+
+        return View::make('frontend.about', array('context_data' => $context_data));
     }
 
-    public function contact() {        
+    public function contact() {
         $context_data = [];
         $context_data['body_class'] = 'page-sub-page page-contact';
-        $context_data['scripts'] = array('');        
-        return View::make('frontend.contact',array('context_data' => $context_data));   
+        $context_data['scripts'] = array('');
+        return View::make('frontend.contact', array('context_data' => $context_data));
+    }
+
+    public function marketPractice() {
+        $context_data['body_class'] = 'page-sub-page page-blog-detail';
+        return View::make('frontend.market-practice', array('context_data' => $context_data));
     }
 
 }

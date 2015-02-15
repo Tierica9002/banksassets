@@ -14,21 +14,22 @@
     <!-- BEGIN SIDEBAR MENU -->
     <div class="sidebar-menu">
         <ul class="menu-items">
-            <li class="m-t-30">                                        
+            <li class="m-t-30 {{ (Request::is('administrator') ? 'open' : '') }}">                                        
                 <a href="{{ URL::route('administrator.dashboard') }}" class="detailed">
-                    <span class="title">Home</span>                        
+                    <span class="title">Home</span>
+                    <span class="details">{{ Request::path() }}</span>                         
                 </a>
                 <span class="icon-thumbnail "><i class="pg-home"></i>
                 </span>
             </li>
-            <li class>                                        
+            <li class="{{ (Request::is('administrator/user*') ? 'open' : '') }}">                                        
                 <a href="{{ URL::route('administrator.user.index') }}" class="detailed">
                     <span class="title">Users</span>                        
                 </a>
                 <span class="icon-thumbnail "><i class="fa fa-user"></i>
                 </span>
             </li>                                 
-            <li class>                                        
+            <li class="{{ (Request::is('administrator/messages*') ? 'open' : '') }}">                                        
                 <a href="{{ URL::route('administrator.messages') }}" class="detailed">
                     <span class="title">Messages</span>
                     <span class="details">{{$messages_counter}} Unread</span>                      
@@ -36,7 +37,7 @@
                 <span class="icon-thumbnail "><i class="pg-mail"></i>
                 </span>
             </li>               
-            <li class>                                        
+            <li class="{{ (Request::is('administrator/contacts*') ? 'open' : '') }}">                                        
                 <a href="{{ URL::route('administrator.contact.index') }}" class="detailed">
                     <span class="title">Contacts</span>                        
                 </a>

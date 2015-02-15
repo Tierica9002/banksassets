@@ -113,6 +113,12 @@
                             </div><!-- /.form-group -->
                         </form><!-- /#form-map -->
                     </aside><!-- /#edit-search -->
+                    <aside id="contact-broker">
+                        <div class="row col-sm-12">
+                            <label for="">Text Field</label>
+                            <input type="text" class="form-control" required="">
+                        </div>
+                    </aside>
                     <aside id="featured-properties">
                         <header><h3>Featured Properties</h3></header>
                         <div class="property small">

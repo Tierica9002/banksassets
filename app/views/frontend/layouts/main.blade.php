@@ -61,7 +61,7 @@
                         </div>
                         <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="{{ URL::route('homepage') }}">Homepage</a>
+                                <li class="{{ (Request::is('/') ? 'active' : '') }}"><a href="{{ URL::route('homepage') }}">Homepage</a>
                                     <!-- <ul class="child-navigation">
                                         <li><a href="index-google-map-fullscreen.html">Google Map Full Screen</a></li>
                                         <li><a href="index-google-map-fixed-height.html">Google Map Fixed Height</a></li>
@@ -77,7 +77,7 @@
                                         <li><a href="index-slider-horizontal-search-box-floated.html">Horizontal Slider Floated Search</a></li>
                                     </ul> -->
                                 </li>
-                                <li><a href="{{ URL::route('main.marketpractice') }}">Market Practice</a></li>
+                                <li class="{{ (Request::is('market-practice') ? 'active' : '') }}"><a href="{{ URL::route('main.marketpractice') }}">Market Practice</a></li>
                                 <!-- <li class="has-child"><a href="#">Properties</a>
                                     <ul class="child-navigation">
                                         <li><a href="property-detail.html">Property Detail</a></li>
@@ -123,14 +123,14 @@
                                         <li><a href="agency-detail.html">Agency Detail</a></li>
                                     </ul>
                                 </li> -->
-                                <li><a href="submit.html">Submit</a></li>
+                                <!-- <li><a href="submit.html">Submit</a></li>
                                 <li class="has-child"><a href="#">Blog</a>
                                     <ul class="child-navigation">
                                         <li><a href="blog.html">Blog Listing</a></li>
                                         <li><a href="blog-detail.html">Blog Post Detail</a></li>
                                     </ul>
-                                </li>
-                                <li><a href="{{ URL::route('main.contact') }}">Contact</a></li>
+                                </li> -->
+                                <li class="{{ (Request::is('contact') ? 'active' : '') }}"><a href="{{ URL::route('main.contact') }}">Contact</a></li>
                             </ul>
                         </nav><!-- /.navbar collapse-->
                         <div class="add-your-property">

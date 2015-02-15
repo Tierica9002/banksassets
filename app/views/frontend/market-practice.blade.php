@@ -1,229 +1,181 @@
 @extends('frontend.layouts.main')
 @section('content')
 <div id="page-content">
-        <!-- Breadcrumb -->
-        <div class="container">
-            <ol class="breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li class="active">Blog Detail</li>
-            </ol>
-        </div>
-        <!-- end Breadcrumb -->
+    <!-- Breadcrumb -->
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li class="active">Right Sidebar</li>
+        </ol>
+    </div>
+    <!-- end Breadcrumb -->
 
-        <div class="container">
-            <div class="row">
-                <!-- Content -->
-                <div class="col-md-9 col-sm-9">
-                    <section id="content">
-                        <header><h1>Article Detail</h1></header>
-                        <article class="blog-post">
-                            <a href="blog-detail.html"><img src="{{asset('frontend/img/properties/property-detail-02.jpg')}}"></a>
-                            <header><a href="blog-detail.html"><h2>Vivamus porta orci eu turpis vulputate ornare fusce hendrerit arcu risu</h2></a></header>
-                            <figure class="meta">
-                                <a href="#" class="link-icon"><i class="fa fa-user"></i>Admin</a>
-                                <a href="#" class="link-icon"><i class="fa fa-calendar"></i>06/04/2014</a>
-                                <div class="tags">
-                                    <a href="#" class="tag article">Architecture</a>
-                                    <a href="#" class="tag article">Design</a>
-                                    <a href="#" class="tag article">Trend</a>
-                                </div>
-                            </figure>
-                            <p>Fusce quis nulla volutpat, rhoncus ligula ut, pulvinar nisi. In dapibus urna sit amet accumsan
-                                tristique. Donec odio ligula, luctus venenatis varius id, tincidunt ac ipsum. Cras commodo,
-                                velit nec aliquam dictum, tortor velit dictum ipsum, sed ornare nunc leo nec ipsum. Vestibulum
-                                sagittis sapien vitae tristique mollis. Aliquam hendrerit nulla semper, viverra mi et,
-                                hendrerit mauris. Maecenas hendrerit congue ultrices. In laoreet erat blandit eros aliquet,
-                                in malesuada sem rutrum. In placerat porta egestas.
-                            </p>
-                            <h3>Parahraph Headline</h3>
-                            <p>
-                                Phasellus metus ipsum, sollicitudin lacinia turpis in, pellentesque pulvinar diam.
-                                Cras ultricies augue sapien, aliquam hendrerit mi suscipit at. Suspendisse vulputate felis eget
-                                felis convallis fermentum et eu nulla. Donec sagittis sit amet erat non eleifend. Mauris at convallis
-                                magna. Quisque pellentesque id mauris vitae placerat. Mauris facilisis odio nec metus cursus commodo.
-                                Integer vel libero nunc. Donec ac lorem commodo, laoreet elit eget, tempus ante. Quisque eu nunc blandit
-                                erat rutrum feugiat ac sed arcu. In nisi risus, molestie a sem adipiscing, porta volutpat velit.
-                                Pellentesque nec felis sit amet nunc porta tincidunt sit amet et justo.
-                            </p>
-                            <h3>Audio Object</h3>
-                            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/71654970&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-                            <h3>Parahraph Headline</h3>
-                            <p>
-                                Phasellus metus ipsum, sollicitudin lacinia turpis in, pellentesque pulvinar diam.
-                                Cras ultricies augue sapien, aliquam hendrerit mi suscipit at. Suspendisse vulputate felis eget
-                                felis convallis fermentum et eu nulla. Donec sagittis sit amet erat non eleifend. Mauris at convallis
-                                magna. Quisque pellentesque id mauris vitae placerat.
-                            </p>
-                            <h4>List Headline</h4>
-                            <ul>
-                                <li>Phasellus metus ipsum, sollicitudin</li>
-                                <li>Quisque pellentesque id mauris</li>
-                                <li>Donec ac lorem commodo</li>
-                                <li>In nisi risus, molestie a sem adipiscing</li>
-                                <li>Pellentesque nec felis sit amet nunc</li>
-                            </ul>
-                        </article><!-- /.blog-post-listing -->
-                        <section id="about-author">
-                            <header><h3>About the Author</h3></header>
-                            <div class="post-author">
-                                <img src="assets/img/member-04.jpg">
-                                <div class="wrapper">
-                                    <header>Maria Scott</header>
-                                    <p>Phasellus metus ipsum, sollicitudin lacinia turpis in, pellentesque pulvinar diam.
-                                        Cras ultricies augue sapien, aliquam hendrerit mi suscipit at. Suspendisse vulputate felis eget
-                                    </p>
+    <div class="container">
+        <div class="row">
+            <!-- Content -->
+            <div class="col-md-9 col-sm-9">
+                <section id="content">
+                    <header><h1>Right Sidebar</h1></header>
+                    <section>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet mollis dui, at
+                            lobortis sapien elementum eu. Integer nec nunc malesuada, pharetra leo non, laoreet elit.
+                            Cras eget rhoncus metus, vel fermentum augue. Pellentesque ornare semper rhoncus. Aliquam ut
+                            laoreet nibh, non convallis metus. Pellentesque gravida rhoncus enim placerat tempus. Nam
+                            egestas euismod augue at hendrerit. Curabitur mauris enim, viverra vel tristique ac, egestas
+                            eu leo. Praesent viverra, velit non ultricies interdum, tellus arcu tristique odio,
+                            a tristique augue purus eget erat.
+                        </p>
+                        <p>
+                            Nullam et sollicitudin neque, vitae fringilla lacus. Suspendisse erat justo, ultrices
+                            quis congue et, consequat at ligula. Sed ac nunc imperdiet tellus commodo facilisis. Duis
+                            vehicula lacus at ultrices ultrices. Pellentesque dictum justo vestibulum risus fringilla
+                            congue. Nam vitae massa dictum dui molestie faucibus in scelerisque risus. Proin congue augue
+                            iaculis lectus interdum, a euismod leo consequat. In in convallis ante. Vestibulum euismod
+                            massa porttitor lectus interdum lobortis. Fusce odio nisi, accumsan non semper non,
+                            dignissim vel enim.
+                        </p>
+                        <p>
+                            Phasellus egestas enim dictum sapien condimentum, eget bibendum nulla consequat. Nullam pharetra,
+                            neque ac aliquet cursus, ligula lacus placerat lectus, non sollicitudin felis elit at felis.
+                            Morbi semper enim vitae velit lobortis pellentesque. Nunc fringilla, lorem id sollicitudin tempor,
+                            libero ante elementum lectus, non egestas mi felis consectetur dui. Morbi eget consequat dui. Ut nec
+                            venenatis ligula, nec malesuada dui. Nullam interdum odio a pulvinar rhoncus. Fusce ut vehicula diam.
+                            Vivamus eu purus semper, dignissim augue sit amet, imperdiet enim. Proin ultrices luctus risus. Nunc
+                            vel interdum mi. Etiam dignissim libero sem, a faucibus metus porttitor eget.
+                            Proin dapibus ipsum ut molestie scelerisque. Ut nec vehicula augue.
+                        </p>
+                    </section>
+                </section><!-- /#agent-detail -->
+            </div><!-- /.col-md-9 -->
+            <!-- end Content -->
+
+            <!-- sidebar -->
+            <div class="col-md-3 col-sm-3">
+                <section id="sidebar">
+                    <aside id="edit-search">
+                        <header><h3>Search Properties</h3></header>
+                        <form role="form" id="form-sidebar" class="form-search" action="properties-listing.html">
+                            <div class="form-group">
+                                <select name="type">
+                                    <option value="">Status</option>
+                                    <option value="1">Rent</option>
+                                    <option value="2">Sale</option>
+                                </select>
+                            </div><!-- /.form-group -->
+                            <div class="form-group">
+                                <select name="country">
+                                    <option value="">Country</option>
+                                    <option value="1">France</option>
+                                    <option value="2">Great Britain</option>
+                                    <option value="3">Spain</option>
+                                    <option value="4">Russia</option>
+                                    <option value="5">United States</option>
+                                </select>
+                            </div><!-- /.form-group -->
+                            <div class="form-group">
+                                <select name="city">
+                                    <option value="">City</option>
+                                    <option value="1">New York</option>
+                                    <option value="2">Los Angeles</option>
+                                    <option value="3">Chicago</option>
+                                    <option value="4">Houston</option>
+                                    <option value="5">Philadelphia</option>
+                                </select>
+                            </div><!-- /.form-group -->
+                            <div class="form-group">
+                                <select name="district">
+                                    <option value="">District</option>
+                                    <option value="1">Manhattan</option>
+                                    <option value="2">The Bronx</option>
+                                    <option value="3">Brooklyn</option>
+                                    <option value="4">Queens</option>
+                                    <option value="5">Staten Island</option>
+                                </select>
+                            </div><!-- /.form-group -->
+                            <div class="form-group">
+                                <select name="property-type">
+                                    <option value="">Property Type</option>
+                                    <option value="1">Apartment</option>
+                                    <option value="2">Condominium</option>
+                                    <option value="3">Cottage</option>
+                                    <option value="4">Flat</option>
+                                    <option value="5">House</option>
+                                </select>
+                            </div><!-- /.form-group -->
+                            <div class="form-group">
+                                <div class="price-range">
+                                    <input id="price-input" type="text" name="price" value="1000;299000">
                                 </div>
                             </div>
-                        </section>
-                    </section><!-- /#content -->
-                    <section id="comments">
-                        <header><h2 class="no-border">Comments</h2></header>
-                        <ul class="comments">
-                            <li class="comment">
-                                <figure>
-                                    <div class="image">
-                                        <img alt="" src="assets/img/client-01.jpg">
-                                    </div>
-                                </figure>
-                                <div class="comment-wrapper">
-                                    <div class="name pull-left">Catherine Brown</div>
-                                    <span class="date pull-right"><span class="fa fa-calendar"></span>12.05.2014</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum, sem ut sollicitudin consectetur,
-                                        augue diam ornare massa, ac vehicula leo turpis eget purus. Nunc pellentesque vestibulum mauris, eget suscipit
-                                        mauris imperdiet vel. Nulla et massa metus. Nam porttitor quam eget ante elementum consectetur. Aenean ac nisl
-                                        et nulla placerat suscipit eu a mauris. Curabitur quis augue condimentum, varius mi in, ultricies velit.
-                                        Suspendisse potenti.
-                                    </p>
-                                    <a href="#" class="reply"><span class="fa fa-reply"></span>Reply</a>
-                                    <hr>
-                                </div>
-                            </li>
-                            <li>
-                                <ul class="comments-child">
-                                    <li class="comment">
-                                        <figure>
-                                            <div class="image">
-                                                <img alt="" src="assets/img/agent-01.jpg">
-                                            </div>
-                                        </figure>
-                                        <div class="comment-wrapper">
-                                            <div class="name">John Doe</div>
-                                            <span class="date"><span class="fa fa-calendar"></span>24.06.2014</span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum, sem ut sollicitudin consectetur,
-                                                augue diam ornare massa, ac vehicula leo turpis eget purus. Nunc pellentesque vestibulum mauris, eget suscipit
-                                                mauris.
-                                            </p>
-                                            <a href="#" class="reply"><span class="fa fa-reply"></span>Reply</a>
-                                            <hr>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="comment">
-                                <figure>
-                                    <div class="image">
-                                        <img alt="" src="assets/img/user-02.jpg">
-                                    </div>
-                                </figure>
-                                <div class="comment-wrapper">
-                                    <div class="name">John Doe</div>
-                                    <span class="date"><span class="fa fa-calendar"></span>08.05.2014</span>
-                                    <p>Quisque iaculis neque at dui cursus posuere. Sed tristique pharetra orci, eu malesuada ante tempus nec.
-                                        Phasellus enim odio, facilisis et ante vel, tempor congue sapien. Praesent eget ligula
-                                        eu libero cursus facilisis vel non arcu. Sed vitae quam enim.
-                                    </p>
-                                    <a href="#" class="reply"><span class="fa fa-reply"></span>Reply</a>
-                                    <hr>
-                                </div>
-                            </li>
-                        </ul>
-                    </section><!-- /#comments -->
-                    <section id="leave-reply">
-                        <header><h2 class="no-border">Leave a Reply</h2></header>
-                        <form role="form" id="form-blog-reply" method="post"  class="clearfix">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="form-blog-reply-name">Your Name<em>*</em></label>
-                                        <input type="text" class="form-control" id="form-blog-reply-name" name="form-blog-reply-name" required>
-                                    </div><!-- /.form-group -->
-                                </div><!-- /.col-md-6 -->
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="form-blog-reply-email">Your Email<em>*</em></label>
-                                        <input type="email" class="form-control" id="form-blog-reply-email" name="form-blog-reply-email" required>
-                                    </div><!-- /.form-group -->
-                                </div><!-- /.col-md-6 -->
-                            </div><!-- /.row -->
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="form-blog-reply-message">Your Message<em>*</em></label>
-                                        <textarea class="form-control" id="form-blog-reply-message" rows="5" name="form-blog-reply-message" required></textarea>
-                                    </div><!-- /.form-group -->
-                                </div><!-- /.col-md-12 -->
-                            </div><!-- /.row -->
-                            <div class="form-group clearfix">
-                                <button type="submit" class="btn pull-right btn-default" id="form-blog-reply-submit">Leave a Reply</button>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-default">Search Now</button>
                             </div><!-- /.form-group -->
-                            <div id="form-rating-status"></div>
-                        </form><!-- /#form-contact -->
-                    </section>
-                </div><!-- /.col-md-9 -->
-                <!-- end Content -->
-
-                <!-- sidebar -->
-                <div class="col-md-3 col-sm-3">
-                    <section id="sidebar">
-                        <aside id="our-guides">
-                            <header><h3>Our Guides</h3></header>
-                            <a href="#" class="universal-button">
-                                <figure class="fa fa-home"></figure>
-                                <span>Buying Guide</span>
-                                <span class="arrow fa fa-angle-right"></span>
-                            </a><!-- /.universal-button -->
-                            <a href="#" class="universal-button">
-                                <figure class="fa fa-umbrella"></figure>
-                                <span>Right Insurance for You</span>
-                                <span class="arrow fa fa-angle-right"></span>
-                            </a><!-- /.universal-button -->
-                        </aside><!-- /#our-guide -->
-                        <aside id="search">
-                            <header><h3>Search</h3></header>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Enter Keyword">
-                                <span class="input-group-btn"><button class="btn btn-default search" type="button"><i class="fa fa-search"></i></button></span>
-                            </div><!-- /input-group -->
-                        </aside>
-                        <aside id="post-archive">
-                            <header><h3>Post Archive</h3></header>
-                            <ul class="list-links">
-                                <li><a href="#">June 2014</a></li>
-                                <li><a href="#">May 2014</a></li>
-                                <li><a href="#">April 2014</a></li>
-                                <li><a href="#">March 2014</a></li>
-                                <li><a href="#">January 2014</a></li>
-                                <li><a href="#">December 2013</a></li>
-                                <li><a href="#">November 2013</a></li>
-                                <li><a href="#">August 2013</a></li>
-                            </ul>
-                        </aside><!-- /#post-archive -->
-                        <aside id="categories">
-                            <header><h3>Categories</h3></header>
-                            <ul class="list-links">
-                                <li><a href="#">Architecture</a></li>
-                                <li><a href="#">Apartments</a></li>
-                                <li><a href="#">Design</a></li>
-                                <li><a href="#">Do it yourself</a></li>
-                                <li><a href="#">Housing</a></li>
-                                <li><a href="#">Interior</a></li>
-                                <li><a href="#">Trends</a></li>
-                            </ul>
-                        </aside><!-- /#categories -->
-                    </section><!-- /#sidebar -->
-                </div><!-- /.col-md-3 -->
-                <!-- end Sidebar -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </div>
+                        </form><!-- /#form-map -->
+                    </aside><!-- /#edit-search -->
+                    <aside id="contact-broker">
+                        <div class="row col-sm-12">
+                            <label for="">Text Field</label>
+                            <input type="text" class="form-control" required="">
+                        </div>
+                    </aside>
+                    <aside id="featured-properties">
+                        <header><h3>Featured Properties</h3></header>
+                        <div class="property small">
+                            <a href="property-detail.html">
+                                <div class="property-image">
+                                    <img alt="" src="assets/img/properties/property-06.jpg">
+                                </div>
+                            </a>
+                            <div class="info">
+                                <a href="property-detail.html"><h4>2186 Rinehart Road</h4></a>
+                                <figure>Doral, FL 33178 </figure>
+                                <div class="tag price">$ 72,000</div>
+                            </div>
+                        </div><!-- /.property -->
+                        <div class="property small">
+                            <a href="property-detail.html">
+                                <div class="property-image">
+                                    <img alt="" src="assets/img/properties/property-09.jpg">
+                                </div>
+                            </a>
+                            <div class="info">
+                                <a href="property-detail.html"><h4>2479 Murphy Court</h4></a>
+                                <figure>Minneapolis, MN 55402</figure>
+                                <div class="tag price">$ 36,000</div>
+                            </div>
+                        </div><!-- /.property -->
+                        <div class="property small">
+                            <a href="property-detail.html">
+                                <div class="property-image">
+                                    <img alt="" src="assets/img/properties/property-03.jpg">
+                                </div>
+                            </a>
+                            <div class="info">
+                                <a href="property-detail.html"><h4>1949 Tennessee Avenue</h4></a>
+                                <figure>Minneapolis, MN 55402</figure>
+                                <div class="tag price">$ 128,600</div>
+                            </div>
+                        </div><!-- /.property -->
+                    </aside><!-- /#featured-properties -->
+                    <aside id="our-guides">
+                        <header><h3>Our Guides</h3></header>
+                        <a href="#" class="universal-button">
+                            <figure class="fa fa-home"></figure>
+                            <span>Buying Guide</span>
+                            <span class="arrow fa fa-angle-right"></span>
+                        </a><!-- /.universal-button -->
+                        <a href="#" class="universal-button">
+                            <figure class="fa fa-umbrella"></figure>
+                            <span>Right Insurance for You</span>
+                            <span class="arrow fa fa-angle-right"></span>
+                        </a><!-- /.universal-button -->
+                    </aside><!-- /#our-guide -->
+                </section><!-- /#sidebar -->
+            </div><!-- /.col-md-3 -->
+            <!-- end Sidebar -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div>
+<!-- end Page Content -->
 @stop

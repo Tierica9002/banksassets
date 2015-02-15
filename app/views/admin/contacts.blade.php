@@ -79,13 +79,8 @@
         <div class="container-fluid container-fixed-lg bg-white">
             <!-- START PANEL -->
             <div class="panel panel-transparent">
-                <div class="panel-heading">                
-                    <div class="pull-right">
-                        <!--                        <div class="col-xs-12">
-                                                    <input type="text" id="search-table" class="form-control pull-right" placeholder="Search">
-                                                </div>-->
-                    </div>
-                    <div class="clearfix"></div>
+                <div class="panel-heading">
+                    <div class="panel-title">Contacts Table</div>
                 </div>
                 <div class="panel-body">                    
                     {{ Form::open(['route' => ['administrator.createxls'],'method' => 'post', 'class' => 'form-inline', 'role' => 'form', 'autocomplete' => 'off']) }}

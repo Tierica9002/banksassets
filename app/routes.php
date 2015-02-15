@@ -27,13 +27,15 @@ Route::group(array('prefix' => 'administrator'), function() {
     Route::get('/', array('as' => 'administrator.dashboard', 'uses' => 'AdminHomeController@index'));
     Route::get('/login', array( 'as'=> 'administrator.login', 'uses' => 'AdminHomeController@login'));
     Route::get('/logout', array( 'as'=> 'administrator.logout', 'uses' => 'AdminHomeController@logout'));
-    Route::post('/login', ['as' => 'administrator.dologin', 'uses' => 'AdminHomeController@doLogin']);
+    Route::post('/login', array('as' => 'administrator.dologin', 'uses' => 'AdminHomeController@doLogin'));
     Route::get('/register', array( 'as'=> 'administrator.register', 'uses' => 'AdminHomeController@register'));
     Route::get('/serve-emails', array('as' => 'administrator.serveemails', 'uses' => 'ContactController@serveemails'));
     Route::get('/messages', array('as' => 'administrator.messages', 'uses' => 'ContactController@serveAsMessages'));
     Route::resource('user', 'UserController');
-    Route::resource('complex', 'ComplexController');    
     Route::resource('contact', 'ContactController');
+    Route::resource('type', 'TypeController');
+    Route::resource('asset', 'AssetController');
+    Route::resource('group', 'GroupController');
     Route::post('/create-xls', array('as' => 'administrator.createxls', 'uses' => 'ContactController@createXls'));
     
 });

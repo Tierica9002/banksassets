@@ -16,9 +16,10 @@ class AdminHomeController extends BaseController {
 
     public function __construct() {
         $this->beforeFilter('csrf', array('on' => ['post', 'put', 'delete']));
-        
-        $messages_counter = Contact::where('message_read', '=', 0)->count();        
+        $types = Type::all();
+        $messages_counter = Contact::where('message_read', '=', 0)->count();
         View::share('messages_counter', $messages_counter);
+        View::share('types', $types);
     }
 
     public function index() {
@@ -42,7 +43,7 @@ class AdminHomeController extends BaseController {
 
         // pass input to validator
         $validator = Validator::make(Input::all(), $rules);
-        
+
         // test if input fails
         if ($validator->fails()) {
             return Redirect::route('administrator.login')->withErrors($validator);
@@ -84,7 +85,7 @@ class AdminHomeController extends BaseController {
         return Redirect::route('administrator.dashboard');
     }
 
-    public function register() {        
+    public function register() {
         try {
             // Create the user
             $user = Sentry::createUser(array(

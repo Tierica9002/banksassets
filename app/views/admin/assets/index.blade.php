@@ -1,4 +1,4 @@
-@extends('layouts.admin.main')
+@extends('admin.layouts.main')
 @section('content')
 <!-- START PAGE CONTENT WRAPPER -->
 <div class="page-content-wrapper">
@@ -65,9 +65,9 @@
                     <!-- START BREADCRUMB -->
                     <ul class="breadcrumb">
                         <li>
-                            <p>Users</p>
+                            <p>Assets</p>
                         </li>
-                        <li><a href="#" class="active">List Users</a>
+                        <li><a href="#" class="active">List Assets</a>
                         </li>
                     </ul>
                     <!-- END BREADCRUMB -->                
@@ -81,47 +81,47 @@
             <div class="panel panel-transparent">
                 <div class="panel-heading">                
                     <div class="pull-right">
-<!--                        <div class="col-xs-12">
-                            <input type="text" id="search-table" class="form-control pull-right" placeholder="Search">
-                        </div>-->
+                        <!--                        <div class="col-xs-12">
+                                                    <input type="text" id="search-table" class="form-control pull-right" placeholder="Search">
+                                                </div>-->
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="panel-body">
-                    <a href="{{ URL::route('administrator.user.create') }}">Add User</a>
+                <div class="panel-body">                                        
+                    <a href="{{ URL::route('administrator.asset.create') }}" class="btn btn-default btn-cons m-b-10"><i class="fa fa-plus-circle"></i> Add Asset</a>                    
                     @if (Session::has('message'))
                     <div style="font-size:20px; color: green;" class="alert-box success">
                         {{{ Session::get('message') }}}
                     </div>
                     @endif
-                    <table class="table table-hover demo-table-search" id="tableWithSearch">
+                    <table class="table table-hover">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Email</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Last Login</th>
-                                <th>Actions</th>
+                                <th>Name</th>                                
+                                <th class="text-center">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($assets as $asset )
                             <tr>
-                                <td class="v-align-middle semi-bold">
-                                </td>
+                                <td>
+                                    {{$asset->id}}
+                                </td>                                
                                 <td class="v-align-middle">
-                                </td>
-                                <td class="v-align-middle">
-                                </td>
-                                <td class="v-align-middle">
-                                </td>
-                                <td class="v-align-middle">
-                                  
-                                </td>
-                                <td class="v-align-middle">
-<!--                               
+                                    {{$asset->title}}
+                                </td>                                
+                                <td class="v-align-middle text-center">
+                                    {{ Form::open(array('route' => array('administrator.asset.destroy', $asset->id), 'method' => 'delete')) }}
+                                    <div class="btn-group btn-group-xs">
+                                        <a href="{{ URL::route('administrator.asset.edit', ['id'=> $asset->id]) }}" type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Edit</a>                                        
+                                        <button type="submit" class="btn btn-default"><i class="fa fa-remove"></i> Delete</button>                                        
+                                    </div>
+                                     {{ Form::close() }}                                                                        
                                 </td>
                             </tr>  
+                            @endforeach
+
                         </tbody>
                     </table>
                 </div>
@@ -129,5 +129,5 @@
             <!-- END PANEL -->
         </div>          
     </div>
-    <!-- END PAGE CONTENT -->    
-@stop
+    <!-- END PAGE CONTENT -->
+    @stop

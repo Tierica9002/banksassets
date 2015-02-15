@@ -1,6 +1,6 @@
 <?php
 
-class ComplexController extends \BaseController {
+class GroupController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +9,7 @@ class ComplexController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('admin.complexlist');
+		//
 	}
 
 

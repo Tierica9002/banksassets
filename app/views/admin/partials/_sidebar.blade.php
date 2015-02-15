@@ -50,28 +50,22 @@
                 </a>
                 <span class="icon-thumbnail"><i class="fa fa-building"></i></span>
                 <ul class="sub-menu">
+                    @foreach ($types as $type) 
                     <li class="">
-                        <a href="color.html">Villas</a>
-                        <span class="icon-thumbnail">v</span>
-                    </li>
-                    <li class="">
-                        <a href="typography.html">Lands</a>
-                        <span class="icon-thumbnail">l</span>
-                    </li>
-                    <li class="">
-                        <a href="icons.html">Offices</a>
-                        <span class="icon-thumbnail">o</span>
-                    </li>
-                    <li class="">
-                        <a href="buttons.html">Industrials</a>
-                        <span class="icon-thumbnail">i</span>
-                    </li>
-                    <li class="">
-                        <a href="notifications.html">Residential</a>
-                        <span class="icon-thumbnail">r</span>
+                        <a href="{{URL::route('administrator.type.show',['id' => $type->id])}}">{{$type->type_name}}</a>
+                        <span class="icon-thumbnail">{{strtolower(substr($type->type_name, 0, 1))}}</span>
                     </li>                    
+                    @endforeach                                  
+                    
                 </ul>
             </li>
+            <li class>                                        
+                <a href="{{URL::route('administrator.type.index')}}" class="detailed">
+                    <span class="title">Types</span>                        
+                </a>
+                <span class="icon-thumbnail "><i class="pg-contact_book"></i>
+                </span>
+            </li>                  
         </ul>
         <div class="clearfix"></div>
     </div>

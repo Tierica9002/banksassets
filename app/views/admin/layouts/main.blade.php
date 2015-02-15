@@ -28,6 +28,9 @@
         {{HTML::style('admin/plugins/jquery-datatable/media/css/jquery.dataTables.css')}}
         {{HTML::style('admin/plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css')}}
         {{HTML::style('admin/plugins/datatables-responsive/css/datatables.responsive.css')}}        
+        {{HTML::style('admin/plugins/bootstrap-tag/bootstrap-tagsinput.css')}}        
+        {{HTML::style('admin/plugins/summernote/css/summernote.css')}}        
+        
         <!-- BEGIN Pages CSS-->
         {{HTML::style('admin/css/pages-icons.css')}}
         {{HTML::style('admin/css/pages.css', ['class' => 'main-stylesheet'])}}

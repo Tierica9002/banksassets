@@ -77,6 +77,11 @@
                 stylesheets: [getBaseURL() + "/pages/css/editor.css"],
                 customTemplates: myCustomTemplates
             });
+            $('#wysiwyg5-2').wysihtml5({
+                html: true,
+                stylesheets: [getBaseURL() + "/pages/css/editor.css"],
+                customTemplates: myCustomTemplates
+            });
         }, 500);
 
 

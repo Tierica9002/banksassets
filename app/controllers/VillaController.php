@@ -1,13 +1,11 @@
 <?php
 
-class AssetController extends \BaseController {
+class VillaController extends \BaseController {
 
     public function __construct() {
         $this->beforeFilter('csrf', array('on' => ['post', 'put', 'delete']));
-        $types = Type::all();
         $messages_counter = Contact::where('message_read', '=', 0)->count();
         View::share('messages_counter', $messages_counter);
-        View::share('types', $types);
     }
 
     /**
@@ -16,7 +14,8 @@ class AssetController extends \BaseController {
      * @return Response
      */
     public function index() {
-        //
+        $villas = Villa::all();
+        return View::make('admin.assets.villas.index')->withVillas($villas);
     }
 
     /**
@@ -25,7 +24,7 @@ class AssetController extends \BaseController {
      * @return Response
      */
     public function create() {
-        return View::make('admin.assets.addasset');
+        return View::make('admin.assets.villas.addvilla');
     }
 
     /**
@@ -34,32 +33,7 @@ class AssetController extends \BaseController {
      * @return Response
      */
     public function store() {
-        $rules = array(
-            'title' => array('required', 'unique'),
-            'description' => array('required'),
-            'address' => array('required')
-        );
-
-        // pass input to validator
-        $validator = Validator::make(Input::all(), $rules);
-
-        // test if input fails
-        if ($validator->fails()) {
-            return Redirect::route('administrator.asset.create')->withErrors($validator)->withInput();
-        }
-
-
-        $title = Input::get('title');
-        $description = Input::get('description');
-        $address = Input::get('address');
-        
-        $asset = new Asset();
-        $asset->title = $title;
-        $asset->description = $title;
-        $asset->address = $address;
-        $asset->save();
-
-        return Redirect::route('administrator.type.index')->withMessage('Type has been added!');
+        //
     }
 
     /**

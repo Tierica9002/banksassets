@@ -7,11 +7,17 @@
  */
 
 /**
- * Description of Group
+ * Description of Villa
  *
  * @author Tierica
  */
-class Group extends Eloquent{
-    protected $table = 'asset_groups';
+class Villa extends Eloquent {
+
+    protected $table = 'villas';
     
+    
+    public function commons()
+    {
+        return $this->hasOne('AssetCommon');
+    }        
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAssetGroupsTable extends Migration {
+class AssetCommonsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,12 @@ class CreateAssetGroupsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('asset_groups', function(Blueprint $table)
+		Schema::create('asset_commons', function(Blueprint $table)
 		{
 			$table->increments('id');
-                        $table->integer('type_id');
-                        $table->string('group_name');
+                        $table->integer('asset_id');
+                        $table->string('asset_type');
+                        $table->float('price');
 			$table->timestamps();
 		});
 	}
@@ -28,7 +29,7 @@ class CreateAssetGroupsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('asset_groups');
+		Schema::drop('asset_commons');
 	}
 
 }

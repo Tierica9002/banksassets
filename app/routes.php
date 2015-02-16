@@ -33,11 +33,8 @@ Route::group(array('prefix' => 'administrator'), function() {
     Route::get('/messages', array('as' => 'administrator.messages', 'uses' => 'ContactController@serveAsMessages'));
     Route::resource('user', 'UserController');
     Route::resource('contact', 'ContactController');
-    Route::resource('type', 'TypeController');
-    Route::resource('asset', 'AssetController');
-    Route::resource('group', 'GroupController');
-    Route::post('/create-xls', array('as' => 'administrator.createxls', 'uses' => 'ContactController@createXls'));
-    
+    Route::resource('villa', 'VillaController');
+    Route::post('/create-xls', array('as' => 'administrator.createxls', 'uses' => 'ContactController@createXls'));    
 });
 
 Route::when('administrator*', 'sentry_is_logged');

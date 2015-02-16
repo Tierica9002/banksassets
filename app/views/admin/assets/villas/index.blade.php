@@ -65,9 +65,9 @@
                     <!-- START BREADCRUMB -->
                     <ul class="breadcrumb">
                         <li>
-                            <p>Assets</p>
+                            <p>Villas</p>
                         </li>
-                        <li><a href="#" class="active">List Assets</a>
+                        <li><a href="#" class="active">List Villas</a>
                         </li>
                     </ul>
                     <!-- END BREADCRUMB -->                
@@ -88,7 +88,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="panel-body">                                        
-                    <a href="{{ URL::route('administrator.asset.create') }}" class="btn btn-default btn-cons m-b-10"><i class="fa fa-plus-circle"></i> Add Asset</a>                    
+                    <a href="{{ URL::route('administrator.villa.create') }}" class="btn btn-default btn-cons m-b-10"><i class="fa fa-plus-circle"></i> Add Villa</a>                    
                     @if (Session::has('message'))
                     <div style="font-size:20px; color: green;" class="alert-box success">
                         {{{ Session::get('message') }}}
@@ -103,18 +103,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($assets as $asset )
+                            @foreach ($villas as $villa)
                             <tr>
                                 <td>
-                                    {{$asset->id}}
                                 </td>                                
                                 <td class="v-align-middle">
-                                    {{$asset->title}}
                                 </td>                                
                                 <td class="v-align-middle text-center">
-                                    {{ Form::open(array('route' => array('administrator.asset.destroy', $asset->id), 'method' => 'delete')) }}
+                                    {{ Form::open(array('route' => array('administrator.villa.destroy', $villa->id), 'method' => 'delete')) }}
                                     <div class="btn-group btn-group-xs">
-                                        <a href="{{ URL::route('administrator.asset.edit', ['id'=> $asset->id]) }}" type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Edit</a>                                        
+                                        <a href="{{ URL::route('administrator.villa.edit', ['id'=> $villa->id]) }}" type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Edit</a>                                        
                                         <button type="submit" class="btn btn-default"><i class="fa fa-remove"></i> Delete</button>                                        
                                     </div>
                                      {{ Form::close() }}                                                                        

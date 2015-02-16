@@ -50,23 +50,14 @@
                     <span class=" arrow"></span>
                 </a>
                 <span class="icon-thumbnail"><i class="fa fa-building"></i></span>
-                <ul class="sub-menu">
-                    @foreach ($types as $type) 
+                <ul class="sub-menu">                    
                     <li class="">
-                        <a href="{{URL::route('administrator.type.show',['id' => $type->id])}}">{{$type->type_name}}</a>
-                        <span class="icon-thumbnail">{{strtolower(substr($type->type_name, 0, 1))}}</span>
-                    </li>                    
-                    @endforeach                                  
+                        <a href="#">Villas</a>
+                        <span class="icon-thumbnail">v</span>
+                    </li>                                                                    
                     
                 </ul>
-            </li>
-            <li class>                                        
-                <a href="{{URL::route('administrator.type.index')}}" class="detailed">
-                    <span class="title">Types</span>                        
-                </a>
-                <span class="icon-thumbnail "><i class="pg-contact_book"></i>
-                </span>
-            </li>                  
+            </li>                             
         </ul>
         <div class="clearfix"></div>
     </div>

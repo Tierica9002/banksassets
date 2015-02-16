@@ -33,7 +33,28 @@ class VillaController extends \BaseController {
      * @return Response
      */
     public function store() {
-        //
+        $inputs = cleanKeysFromInput();
+        $columns = cleanKeysFromColumns();
+        $villa = new Villa();
+
+        foreach ($columns as $key => $column) {
+            if (isset($inputs[$column])) {
+                $villa->$column = $inputs[$column];
+            } else {
+                $villa->$column = '';
+            }
+        }
+
+        $villa->save();
+        
+        $assetCommon = new AssetCommon();
+        $assetCommon->pret = Input::get('pret');
+        $assetCommon->asset_type = 'Villa';
+        $assetCommon->asset_id = $villa->id;
+        
+        $assetCommon->save();
+        
+        return Redirect::route('administrator.villa.index')->withMessage('Villa has been added!');
     }
 
     /**
@@ -73,7 +94,10 @@ class VillaController extends \BaseController {
      * @return Response
      */
     public function destroy($id) {
-        //
+        $villa = Villa::findOrFail($id);
+        $villa->delete();
+
+        return Redirect::route('administrator.villa.index')->withMessage('Villa deleted.');
     }
 
 }

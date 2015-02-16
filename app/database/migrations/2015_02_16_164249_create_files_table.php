@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AssetCommonsTable extends Migration {
+class CreateFilesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,12 @@ class AssetCommonsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('asset_commons', function(Blueprint $table)
+		Schema::create('files', function(Blueprint $table)
 		{
 			$table->increments('id');
-                        $table->integer('asset_id');
-                        $table->string('asset_type');
-                        $table->float('pret');
+                        $table->string('filename');
+                        $table->string('extension');
+                        $table->integer('parent_id');
 			$table->timestamps();
 		});
 	}
@@ -29,7 +29,7 @@ class AssetCommonsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('asset_commons');
+		Schema::drop('files');
 	}
 
 }

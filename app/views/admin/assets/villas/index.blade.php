@@ -98,7 +98,7 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Name</th>                                
+                                <th>Description</th>                                
                                 <th class="text-center">Actions</th>
                             </tr>
                         </thead>
@@ -106,8 +106,10 @@
                             @foreach ($villas as $villa)
                             <tr>
                                 <td>
+                                    <p>{{$villa->id}}</p>
                                 </td>                                
                                 <td class="v-align-middle">
+                                    <p>{{$villa->descriere}}</p>
                                 </td>                                
                                 <td class="v-align-middle text-center">
                                     {{ Form::open(array('route' => array('administrator.villa.destroy', $villa->id), 'method' => 'delete')) }}

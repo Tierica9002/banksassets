@@ -34,6 +34,7 @@ Route::group(array('prefix' => 'administrator'), function() {
     Route::resource('user', 'UserController');
     Route::resource('contact', 'ContactController');
     Route::resource('villa', 'VillaController');
+    Route::resource('attachment', 'AttachmentController');
     Route::post('/create-xls', array('as' => 'administrator.createxls', 'uses' => 'ContactController@createXls'));    
 });
 

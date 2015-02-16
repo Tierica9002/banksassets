@@ -19,7 +19,7 @@ class AssetCommon extends Eloquent {
         return $this->asset_type;
     }
 
-    public function getRelation() {
+    public function geModeltRelation() {
         $model = $this->getAssetType();
 
         return $this->belongsTo($model);

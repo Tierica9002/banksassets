@@ -14,8 +14,7 @@ class VillasTable extends Migration {
 	{
 		Schema::create('villas', function(Blueprint $table)
 		{
-			$table->increments('id');
-                        $table->integer('asset_id');
+			$table->increments('id');                       
                         $table->text('descriere');
                         $table->integer('nr_camere');
                         $table->float('suprafata_utila');
@@ -33,7 +32,8 @@ class VillasTable extends Migration {
                         $table->integer('an_constructie');
                         $table->string('structura_rezistenta');
                         $table->string('regim_inaltime');
-                        $table->string('modalitati_plata');
+                        $table->string('credit_imobiliar');
+                        $table->string('cash');                        
                         $table->string('parcare');
                         $table->string('paza_24');
                         $table->string('curent');

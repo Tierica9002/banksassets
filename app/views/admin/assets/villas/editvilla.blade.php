@@ -199,7 +199,7 @@
                                         <label for="checkbox10">Telefon</label>
                                         <input type="checkbox" {{ ($villa->repartitoare ? 'checked' : '')}} name="repartitoare" value="1" id="checkbox11">
                                         <label for="checkbox11">Repartitoare</label>
-                                        <input type="checkbox" {{ ($villa->apometere ? 'checked' : '')}} name="apometere" value="1" id="checkbox12">
+                                        <input type="checkbox" {{ ($villa->apometre ? 'checked' : '')}} name="apometre" value="1" id="checkbox12">
                                         <label for="checkbox12">Apometre</label>
                                     </div>
                                 </div>
@@ -215,10 +215,10 @@
                                         <label for="checkbox13">Scara Interioara</label>
                                         <input type="checkbox" {{ ($villa->curent ? 'checked' : '')}} name="usa_metalica" value="1" id="checkbox14">
                                         <label for="checkbox14">Usa Metalica</label>
-                                        <input type="checkbox" name="centrala_proprie" value="1" id="checkbox15">
-                                        <label for="checkbox15" {{ ($villa->curent ? 'checked' : '')}}>Centrala Proprie</label>
-                                        <input type="checkbox" name="wc_serviciu" value="1" id="checkbox16">
-                                        <label for="checkbox16" {{ ($villa->curent ? 'checked' : '')}}>WC Serviciu</label>                                        
+                                        <input type="checkbox" {{ ($villa->centrala_proprie ? 'checked' : '')}} name="centrala_proprie" value="1" id="checkbox15">
+                                        <label for="checkbox15" >Centrala Proprie</label>
+                                        <input type="checkbox" {{ ($villa->wc_serviciu ? 'checked' : '')}} name="wc_serviciu" value="1" id="checkbox16">
+                                        <label for="checkbox16">WC Serviciu</label>                                        
                                     </div>
                                 </div>
                             </div>

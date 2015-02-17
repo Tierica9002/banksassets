@@ -199,7 +199,7 @@
                                         <label for="checkbox10">Telefon</label>
                                         <input type="checkbox" name="repartitoare" value="1" id="checkbox11">
                                         <label for="checkbox11">Repartitoare</label>
-                                        <input type="checkbox" name="apometere" value="1" id="checkbox12">
+                                        <input type="checkbox" name="apometre" value="1" id="checkbox12">
                                         <label for="checkbox12">Apometre</label>
                                     </div>
                                 </div>

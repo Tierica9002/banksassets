@@ -41,8 +41,9 @@ class VillasTable extends Migration {
                         $table->string('canalizare');
                         $table->string('gaz');
                         $table->string('catv');
-                        $table->string('repartitoarea');
+                        $table->string('repartitoare');
                         $table->string('apometre');
+                        $table->string('telefon');
                         $table->string('calorifere');
                         $table->string('tamplarie_ferestre');
                         $table->string('usa_intrare');

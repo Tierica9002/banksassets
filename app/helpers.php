@@ -1,20 +1,27 @@
 <?php
-function cleanKeysFromInput()
-{
+
+function cleanKeysFromInput() {
     $propertyInputs = Input::all();
-    
+
     unset($propertyInputs['_token']);
     unset($propertyInputs['_wysihtml5_mode']);
-    
-    return $propertyInputs;    
+
+    return $propertyInputs;
 }
 
 function cleanKeysFromColumns() {
     $columns = Schema::getColumnListing('villas');
-    unset($columns['created_at']);
-    unset($columns['updated_at']);
-    unset($columns['id']);
-    
+
+    if (($key = array_search('created_at', $columns)) !== false) {
+        unset($columns[$key]);
+    }
+    if (($key = array_search('updated_at', $columns)) !== false) {
+        unset($columns[$key]);
+    }
+    if (($key = array_search('id', $columns)) !== false) {
+        unset($columns[$key]);
+    }      
     return $columns;
 }
+
 ?>

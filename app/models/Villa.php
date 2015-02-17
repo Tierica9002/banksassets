@@ -14,10 +14,13 @@
 class Villa extends Eloquent {
 
     protected $table = 'villas';
-    
-    
+        
     public function commons()
     {
-        return $this->hasOne('AssetCommon');
-    }        
+        return $this->hasOne('AssetCommon', 'asset_id');
+    }      
+    
+    public function attachments() {
+        return $this->hasMany('Attachment', 'parent_id');
+    }
 }

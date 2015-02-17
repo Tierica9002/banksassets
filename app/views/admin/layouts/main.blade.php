@@ -649,6 +649,7 @@
             {{HTML::script('admin/plugins/switchery/js/switchery.min.js')}}
             {{HTML::script('admin/plugins/bootstrap3-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}
             {{HTML::script('admin/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js')}}
+            {{HTML::script('admin/plugins/jquery-inputmask/jquery.inputmask.min.js')}}
             {{HTML::script('admin/plugins/jquery-autonumeric/autoNumeric.js')}}
             {{HTML::script('admin/plugins/dropzone/dropzone.min.js')}}
             {{HTML::script('admin/plugins/bootstrap-tag/bootstrap-tagsinput.min.js')}}

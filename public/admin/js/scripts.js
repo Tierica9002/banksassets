@@ -61,6 +61,17 @@
                 }
             });
         }
+        if ($('#add-villa').length > 0) {            
+            $('#add-villa-submit').click(function(){
+                $('#add-villa').submit();
+            });        
+            $('.dropzone').on("addedfile",function(file){
+                
+            });
+            $('.dropzone').on("sending",function(file){
+                console.log(file);
+            });
+        }
     });
 
 })(window.jQuery);

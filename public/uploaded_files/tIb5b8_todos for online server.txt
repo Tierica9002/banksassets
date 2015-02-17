@@ -1,0 +1,7 @@
+Install sentry user auth lib
+
+Route::group(array('prefix' => 'admin'), function() {
+
+    // Responds to Request::root() . '/admin/photo'
+    Route::resource('photo', 'Controllers\\Admin\\PhotoController');
+});

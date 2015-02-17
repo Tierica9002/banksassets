@@ -52,7 +52,7 @@
                 <span class="icon-thumbnail"><i class="fa fa-building"></i></span>
                 <ul class="sub-menu">                    
                     <li class="">
-                        <a href="#">Villas</a>
+                        <a href="{{ URL::route('administrator.villa.index') }}">Villas</a>
                         <span class="icon-thumbnail">v</span>
                     </li>                                                                    
                     

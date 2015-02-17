@@ -11,8 +11,12 @@
  *
  * @author Tierica
  */
-class Attachment {
+class Attachment extends Eloquent{
     protected $table = 'files';
     
+    
+    public function villa() {
+        $this->belongsTo('Villa', 'asset_id');
+    }
     
 }

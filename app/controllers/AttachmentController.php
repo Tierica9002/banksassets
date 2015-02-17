@@ -25,15 +25,24 @@ class AttachmentController extends \BaseController {
      *
      * @return Response
      */
-    public function store() {   
-        echo "<pre>";
-        echo 'cc';
-        dd(Input::all()); 
-        if (Input::hasFile('image')) {
-            $file = Input::file('image');
-            $destinationPath = public_path().'/uploaded_files/';;
-            $filename = str_random(6) . '_' . $file->getClientOriginalName();
-            $uploadSuccess = $file->move($destinationPath, $filename);
+    public function store() {
+        if (Input::hasFile('file')) {
+            $files = Input::file('file');
+            foreach ($files as $file) {
+                $destinationPath = public_path() . '/uploaded_files/';
+                $filename = str_random(6) . '_' . $file->getClientOriginalName();
+                $uploadSuccess = $file->move($destinationPath, $filename);
+                $attachment = new Attachment();
+                $attachment->filename = $filename;
+                $attachment->save();
+
+                if ($galleryPhotos = Session::get('gallery_photos')) {
+                    $galleryPhotos[] = $attachment->id;
+                } else {
+                    $galleryPhotos = [$attachment->id];
+                }
+                Session::put('gallery_photos', $galleryPhotos);
+            }
         }
     }
 

@@ -33,6 +33,8 @@ class VillaController extends \BaseController {
      * @return Response
      */
     public function store() {
+        $photoIds = Session::get('gallery_photos');
+        Session::put('gallery_photos', array());
         $inputs = cleanKeysFromInput();
         $columns = cleanKeysFromColumns();
         $villa = new Villa();
@@ -46,14 +48,20 @@ class VillaController extends \BaseController {
         }
 
         $villa->save();
-        
+
         $assetCommon = new AssetCommon();
         $assetCommon->pret = Input::get('pret');
         $assetCommon->asset_type = 'Villa';
         $assetCommon->asset_id = $villa->id;
-        
+
         $assetCommon->save();
-        
+
+        foreach ($photoIds as $photoId) {
+            $image = Attachment::FindOrFail($photoId);
+            $image->parent_id = $villa->id;
+            $image->save();
+        }
+
         return Redirect::route('administrator.villa.index')->withMessage('Villa has been added!');
     }
 
@@ -74,7 +82,11 @@ class VillaController extends \BaseController {
      * @return Response
      */
     public function edit($id) {
-        //
+        $villa = Villa::findOrFail($id);
+        $commons = $villa->commons;        
+        $photos = $villa->attachments;
+
+        return View::make('admin.assets.villas.editvilla')->withVilla($villa)->withCommons($commons)->withPhotos($photos);
     }
 
     /**
@@ -84,7 +96,30 @@ class VillaController extends \BaseController {
      * @return Response
      */
     public function update($id) {
-        //
+        $photoIds = Session::get('gallery_photos');
+        Session::put('gallery_photos', array());
+        $inputs = cleanKeysFromInput();
+        $columns = cleanKeysFromColumns();
+        $villa = Villa::FindOrFail($id);
+        foreach ($columns as $key => $column) {
+            if (isset($inputs[$column])) {
+                $villa->$column = $inputs[$column];
+            } else {
+                $villa->$column = '';
+            }
+        }        
+        
+        $commons = $villa->commons;        
+        $commons->pret = Input::get('pret');
+        $commons->save();
+        $villa->save();
+        foreach ($photoIds as $photoId) {
+            $image = Attachment::FindOrFail($photoId);
+            $image->parent_id = $villa->id;
+            $image->save();
+        }
+
+        return Redirect::route('administrator.villa.index')->withMessage('Villa has been edited!');
     }
 
     /**

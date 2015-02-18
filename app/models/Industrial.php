@@ -11,9 +11,9 @@
  *
  * @author Tierica
  */
-class Industrial extends Eloquent {
-
+class Industrial extends Eloquent {    
     protected $table = 'industrials';
+    protected $guarded = ['id', 'created_at', 'updated_at'];
         
     public function commons()
     {

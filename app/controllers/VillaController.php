@@ -100,7 +100,7 @@ class VillaController extends \BaseController {
         $photoIds = Session::get('gallery_photos');
         Session::put('gallery_photos', array());
         $inputs = cleanKeysFromInput();
-        $columns = cleanKeysFromColumns();        
+        $columns = cleanKeysFromColumns('villas');        
         $villa = Villa::findOrFail($id);                              
         foreach ($columns as $key => $column) {            
             if (isset($inputs[$column])) {

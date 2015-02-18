@@ -39,7 +39,7 @@ class IndustrialController extends \BaseController {
         $columns = cleanKeysFromColumns('industrials');
 //        echo "<pre>";
 //        dd($inputs, $columns);
-        
+
         $industrial = new Industrial();
         foreach ($columns as $key => $column) {
             if (isset($inputs[$column])) {
@@ -84,7 +84,10 @@ class IndustrialController extends \BaseController {
      * @return Response
      */
     public function edit($id) {
-        //
+        $industrial = Industrial::findOrFail($id);
+        $commons = $industrial->commons;        
+        $photos = $commons->attachments;        
+        return View::make('admin.assets.industrials.editindustrial')->withIndustrial($industrial)->withCommons($commons)->withPhotos($photos);
     }
 
     /**
@@ -94,7 +97,24 @@ class IndustrialController extends \BaseController {
      * @return Response
      */
     public function update($id) {
-        //
+        $photoIds = Session::get('gallery_photos');
+        Session::put('gallery_photos', array());
+        
+        $industrial = Industrial::findOrFail($id);
+        $input = cleanInput(Input::all());        
+        $industrial->update($input);
+        $commons = $industrial->commons;
+        $commons->pret = (float) Input::get('pret');
+        $industrial->save();
+        $commons->save();
+
+        foreach ($photoIds as $photoId) {
+            $image = Attachment::FindOrFail($photoId);
+            $image->parent_id = $commons->id;
+            $image->save();
+        }
+
+        return Redirect::route('administrator.industrial.index')->withMessage('Industrials has been edited!');
     }
 
     /**

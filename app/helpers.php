@@ -24,4 +24,14 @@ function cleanKeysFromColumns($table) {
     return $columns;
 }
 
+function cleanInput($inputs) {
+    foreach ($inputs as $key => $value) {
+        if (strpos($key, '_') == 0) {
+            unset($inputs[$key]);
+        }
+    }
+    
+    return $inputs;
+}
+
 ?>

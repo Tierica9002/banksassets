@@ -1,2 +1,0 @@
-t23 = 12 h (defapt 15 min)
-t16 = 3d (defapt 6h)

@@ -49,7 +49,7 @@ class CreateIndustrialTable extends Migration {
                         $table->string('access_separat_personal_birou');
                         $table->string('showroom');
                         $table->string('parcare_camioane');
-                        $table->double('paza_permanenta');                        
+                        $table->string('paza_permanenta');                        
                         $table->string('protectie_incendiu');
                         $table->string('generator_electric');
                         $table->string('sistem_sprinclere');
@@ -71,7 +71,7 @@ class CreateIndustrialTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('industrial');
+		Schema::drop('industrials');
 	}
 
 }

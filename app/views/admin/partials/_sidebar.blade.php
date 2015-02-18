@@ -55,6 +55,10 @@
                         <a href="{{ URL::route('administrator.villa.index') }}">Villas</a>
                         <span class="icon-thumbnail">v</span>
                     </li>                                                                    
+                    <li class="">
+                        <a href="{{ URL::route('administrator.industrial.index') }}">Industrials</a>
+                        <span class="icon-thumbnail">i</span>
+                    </li>                                                                    
                     
                 </ul>
             </li>                             

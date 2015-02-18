@@ -36,7 +36,7 @@
         });
         if ($('#create-xls').length > 0) {
             var idsArr = [];
-            
+
             $('.contact-cb').click(function() {
                 var idsStr = '';
                 if ($(this).is(':checked')) {
@@ -44,16 +44,16 @@
                 } else {
                     var index = idsArr.indexOf($(this).val());
                     idsArr.splice(index, 1);
-                }                
-                for (var i=0; i<idsArr.length; i++) {                    
+                }
+                for (var i = 0; i < idsArr.length; i++) {
                     idsStr += idsArr[i] + ',';
                 }
-                
-               
+
+
                 idsStr = idsStr.substring(0, idsStr.length - 1);
                 $('#contact-ids').val(idsStr);
             });
-            $('#check-all').click(function(){
+            $('#check-all').click(function() {
                 if ($(this).is(':checked')) {
                     $('.contact-cb').prop('checked', true);
                 } else {
@@ -61,15 +61,20 @@
                 }
             });
         }
-        if ($('#add-villa').length > 0) {            
-            $('#add-villa-submit').click(function(){
+        if ($('#add-villa').length > 0) {
+            $('#add-villa-submit').click(function() {
                 $('#add-villa').submit();
-            });        
-            $('.dropzone').on("addedfile",function(file){
-                
             });
-            $('.dropzone').on("sending",function(file){
+            $('.dropzone').on("addedfile", function(file) {
+
+            });
+            $('.dropzone').on("sending", function(file) {
                 console.log(file);
+            });
+        }
+        if ($('#add-industrial').length > 0) {
+            $('#add-industrial-submit').click(function() {
+                $('#add-industrial').submit();
             });
         }
     });

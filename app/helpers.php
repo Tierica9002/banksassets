@@ -9,8 +9,8 @@ function cleanKeysFromInput() {
     return $propertyInputs;
 }
 
-function cleanKeysFromColumns() {
-    $columns = Schema::getColumnListing('villas');
+function cleanKeysFromColumns($table) {
+    $columns = Schema::getColumnListing($table);
 
     if (($key = array_search('created_at', $columns)) !== false) {
         unset($columns[$key]);

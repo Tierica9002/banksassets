@@ -7,16 +7,10 @@
  */
 
 /**
- * Description of Villa
+ * Description of editindustrial
  *
  * @author Tierica
  */
-class Villa extends Eloquent {
-
-    protected $table = 'villas';
-        
-    public function commons()
-    {
-        return $this->hasOne('AssetCommon', 'asset_id');
-    }              
+class editindustrial {
+    //put your code here
 }

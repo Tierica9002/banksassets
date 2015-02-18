@@ -43,7 +43,8 @@
             method: "POST",
             uploadMultiple: true,
             addRemoveLinks: true,
-            removedfile: function(file) {                                
+            removedfile: function(file) {              
+                console.log()
                 var _ref;
                 return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
             }

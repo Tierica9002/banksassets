@@ -11,12 +11,12 @@
  *
  * @author Tierica
  */
-class Villa extends Eloquent {
+class Industrial extends Eloquent {
 
-    protected $table = 'villas';
+    protected $table = 'industrials';
         
     public function commons()
     {
         return $this->hasOne('AssetCommon', 'asset_id');
-    }              
+    }             
 }

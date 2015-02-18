@@ -36,7 +36,7 @@ class VillaController extends \BaseController {
         $photoIds = Session::get('gallery_photos');
         Session::put('gallery_photos', array());
         $inputs = cleanKeysFromInput();
-        $columns = cleanKeysFromColumns();
+        $columns = cleanKeysFromColumns('villas');
         $villa = new Villa();
 
         foreach ($columns as $key => $column) {
@@ -58,7 +58,7 @@ class VillaController extends \BaseController {
 
         foreach ($photoIds as $photoId) {
             $image = Attachment::FindOrFail($photoId);
-            $image->parent_id = $villa->id;
+            $image->parent_id = $assetCommon->id;
             $image->save();
         }
 
@@ -85,7 +85,7 @@ class VillaController extends \BaseController {
         $villa = Villa::findOrFail($id);
         
         $commons = $villa->commons;        
-        $photos = $villa->attachments;
+        $photos = $commons->attachments;
         
         return View::make('admin.assets.villas.editvilla')->withVilla($villa)->withCommons($commons)->withPhotos($photos);
     }
@@ -117,7 +117,7 @@ class VillaController extends \BaseController {
         
         foreach ($photoIds as $photoId) {
             $image = Attachment::FindOrFail($photoId);
-            $image->parent_id = $villa->id;
+            $image->parent_id = $commons->id;
             $image->save();
         }
 
@@ -136,6 +136,7 @@ class VillaController extends \BaseController {
         $images = $villa->attachments;
         foreach ($images as $image) {
             $image->delete();
+            File::delete(public_path().'/uploaded_files/'.$image->filename);
         }
         $commons->delete();
         $villa->delete();

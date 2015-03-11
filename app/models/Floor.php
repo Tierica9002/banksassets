@@ -11,12 +11,8 @@
  *
  * @author Tierica
  */
-class Villa extends Eloquent {
-    protected $table = 'villas';
+class Floor extends Eloquent {    
+    protected $table = 'office_floors';
     protected $guarded = ['id', 'created_at', 'updated_at'];
-    
-    public function commons()
-    {
-        return $this->hasOne('AssetCommon', 'asset_id');
-    }              
+                   
 }

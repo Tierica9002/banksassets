@@ -159,7 +159,7 @@
                                     <div class="checkbox ">
                                         <input type="checkbox" {{ ($villa->credit_imobiliar ? 'checked' : '')}} name="credit_imobiliar" value="1" id="checkbox1">
                                         <label for="checkbox1">Credit Imobiliar</label>
-                                        <input type="checkbox" {{ ($villa->cash ? 'checked' : '')}} name="cash" value="cash" id="checkbox2">
+                                        <input type="checkbox" {{ ($villa->cash ? 'checked' : '')}} name="cash" value="1" id="checkbox2">
                                         <label for="checkbox2">Cash</label>
                                     </div>
                                 </div>
@@ -234,7 +234,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="panel-title">
-                                        Upload
+                                        Upload Images
                                     </div>
                                     <div class="tools">
                                         <a class="collapse" href="javascript:;"></a>

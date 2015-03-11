@@ -7,16 +7,20 @@
  */
 
 /**
- * Description of Villa
+ * Description of Lands
  *
  * @author Tierica
  */
-class Villa extends Eloquent {
-    protected $table = 'villas';
+class Office extends Eloquent {    
+    protected $table = 'offices';
     protected $guarded = ['id', 'created_at', 'updated_at'];
-    
+        
     public function commons()
     {
         return $this->hasOne('AssetCommon', 'asset_id');
-    }              
+    }             
+    
+    public function floors() {
+        return $this->hasMany('Floor', 'office_id');
+    }
 }

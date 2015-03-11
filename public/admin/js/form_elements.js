@@ -39,15 +39,21 @@
         $('.autonumeric').autoNumeric('init');
 
         //Drag n Drop up-loader
-        $(".dropzone").dropzone({
+//        $(".dropzone").dropzone({
+//            method: "POST",
+//            paramName: 'file',
+//            uploadMultiple: true,
+//            addRemoveLinks: true,
+//            removedfile: function(file) {                              
+//                var _ref;
+//                return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
+//            }
+//        });
+        var dz = new Dropzone("#dropzone-documents", {
             method: "POST",
+            parmaName: 'document',
             uploadMultiple: true,
-            addRemoveLinks: true,
-            removedfile: function(file) {              
-                console.log()
-                var _ref;
-                return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
-            }
+            addRemoveLinks: true
         });
         //Single instance of tag inputs - can be initiated with simply using data-role="tagsinput" attribute in any input field
         $('.custom-tag-input').tagsinput({

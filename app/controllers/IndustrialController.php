@@ -85,8 +85,8 @@ class IndustrialController extends \BaseController {
      */
     public function edit($id) {
         $industrial = Industrial::findOrFail($id);
-        $commons = $industrial->commons;        
-        $photos = $commons->attachments;        
+        $commons = $industrial->commons;
+        $photos = $commons->attachments;
         return View::make('admin.assets.industrials.editindustrial')->withIndustrial($industrial)->withCommons($commons)->withPhotos($photos);
     }
 
@@ -99,9 +99,9 @@ class IndustrialController extends \BaseController {
     public function update($id) {
         $photoIds = Session::get('gallery_photos');
         Session::put('gallery_photos', array());
-        
+
         $industrial = Industrial::findOrFail($id);
-        $input = cleanInput(Input::all());        
+        $input = cleanInput(Input::all());
         $industrial->update($input);
         $commons = $industrial->commons;
         $commons->pret = (float) Input::get('pret');
@@ -124,7 +124,20 @@ class IndustrialController extends \BaseController {
      * @return Response
      */
     public function destroy($id) {
-        //
+        $industrial = Industrial::findOrFail($id);
+        $commons = $industrial->commons;
+        $images = $industrial->attachments;
+        if (count($images) > 0) {
+            foreach ($images as $image) {
+                $image->delete();
+                File::delete(public_path() . '/uploaded_files/' . $image->filename);
+            }
+        }
+
+        $commons->delete();
+        $industrial->delete();
+
+        return Redirect::route('administrator.industrial.index')->withMessage('Industrial deleted.');
     }
 
 }

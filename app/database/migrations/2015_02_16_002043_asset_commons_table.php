@@ -17,7 +17,8 @@ class AssetCommonsTable extends Migration {
 			$table->increments('id');
                         $table->integer('asset_id');
                         $table->string('asset_type');
-                        $table->float('pret');
+                        $table->smallInteger('premium_property');
+                        $table->double('pret');
 			$table->timestamps();
 		});
 	}

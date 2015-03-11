@@ -50,16 +50,23 @@
                     <span class=" arrow"></span>
                 </a>
                 <span class="icon-thumbnail"><i class="fa fa-building"></i></span>
-                <ul class="sub-menu">                    
+                <ul class="sub-menu">                                                                        
                     <li class="">
-                        <a href="{{ URL::route('administrator.villa.index') }}">Villas</a>
-                        <span class="icon-thumbnail">v</span>
-                    </li>                                                                    
+                        <a href="{{ URL::route('administrator.land.index') }}">Lands</a>
+                        <span class="icon-thumbnail">l</span>
+                    </li>                                    
                     <li class="">
                         <a href="{{ URL::route('administrator.industrial.index') }}">Industrials</a>
                         <span class="icon-thumbnail">i</span>
                     </li>                                                                    
-                    
+                    <li class="">
+                        <a href="{{ URL::route('administrator.office.index') }}">Offices</a>
+                        <span class="icon-thumbnail">o</span>
+                    </li>                                                        
+                    <li class="">
+                        <a href="{{ URL::route('administrator.villa.index') }}">Villas</a>
+                        <span class="icon-thumbnail">v</span>
+                    </li>                                                        
                 </ul>
             </li>                             
         </ul>

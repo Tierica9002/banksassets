@@ -83,8 +83,8 @@ class VillaController extends \BaseController {
      */
     public function edit($id) {
         $villa = Villa::findOrFail($id);
-        
-        $commons = $villa->commons;        
+
+        $commons = $villa->commons;
         $photos = $commons->attachments;
         
         return View::make('admin.assets.villas.editvilla')->withVilla($villa)->withCommons($commons)->withPhotos($photos);
@@ -100,27 +100,26 @@ class VillaController extends \BaseController {
         $photoIds = Session::get('gallery_photos');
         Session::put('gallery_photos', array());
         $inputs = cleanKeysFromInput();
-        $columns = cleanKeysFromColumns('villas');        
-        $villa = Villa::findOrFail($id);                              
-        foreach ($columns as $key => $column) {            
+        $columns = cleanKeysFromColumns('villas');
+        $villa = Villa::findOrFail($id);
+        foreach ($columns as $key => $column) {
             if (isset($inputs[$column])) {
                 $villa->$column = $inputs[$column];
             } else {
                 $villa->$column = '';
             }
-        }        
-                
-        $commons = $villa->commons;        
-        $commons->pret = (float) Input::get('pret');                
+        }
+
+        $commons = $villa->commons;
+        $commons->pret = (float) Input::get('pret');
         $villa->save();
         $commons->save();
-        
+
         foreach ($photoIds as $photoId) {
             $image = Attachment::FindOrFail($photoId);
             $image->parent_id = $commons->id;
             $image->save();
-        }
-
+        }        
         return Redirect::route('administrator.villa.index')->withMessage('Villa has been edited!');
     }
 
@@ -134,9 +133,11 @@ class VillaController extends \BaseController {
         $villa = Villa::findOrFail($id);
         $commons = $villa->commons;
         $images = $villa->attachments;
-        foreach ($images as $image) {
-            $image->delete();
-            File::delete(public_path().'/uploaded_files/'.$image->filename);
+        if (count($images) > 0) {
+            foreach ($images as $image) {
+                $image->delete();
+                File::delete(public_path() . '/uploaded_files/' . $image->filename);
+            }
         }
         $commons->delete();
         $villa->delete();

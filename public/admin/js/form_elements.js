@@ -37,11 +37,23 @@
         });
         //Autonumeric plug-in - automatic addition of dollar signs,etc controlled by tag attributes
         $('.autonumeric').autoNumeric('init');
-
+         console.log($('#dropzone-documents'));
+        console.log($('.dropzone'));
         //Drag n Drop up-loader
         $(".dropzone").dropzone({
             method: "POST",
             paramName: 'file',
+            uploadMultiple: true,
+            addRemoveLinks: true,
+            removedfile: function(file) {                              
+                var _ref;
+                return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
+            }
+        });
+       
+        $("#dropzone-documents").dropzone({
+            method: "POST",
+            paramName: 'document',
             uploadMultiple: true,
             addRemoveLinks: true,
             removedfile: function(file) {                              

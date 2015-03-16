@@ -43,14 +43,22 @@
                 </a>
                 <span class="icon-thumbnail "><i class="pg-contact_book"></i>
                 </span>
-            </li> 
+            </li>
             <li class="">
                 <a href="javascript:;">
                     <span class="title">Assets</span>
                     <span class=" arrow"></span>
                 </a>
                 <span class="icon-thumbnail"><i class="fa fa-building"></i></span>
-                <ul class="sub-menu">                                                                        
+                <ul class="sub-menu"> 
+                    <li class="">
+                        <a href="{{ URL::route('administrator.appartment.index') }}">Appartments</a>
+                        <span class="icon-thumbnail">a</span>
+                    </li>   
+                    <li class="">
+                        <a href="{{ URL::route('administrator.block.index') }}">Blocks</a>
+                        <span class="icon-thumbnail">b</span>
+                    </li>   
                     <li class="">
                         <a href="{{ URL::route('administrator.land.index') }}">Lands</a>
                         <span class="icon-thumbnail">l</span>
@@ -62,7 +70,11 @@
                     <li class="">
                         <a href="{{ URL::route('administrator.office.index') }}">Offices</a>
                         <span class="icon-thumbnail">o</span>
-                    </li>                                                        
+                    </li>  
+                    <li class="">
+                        <a href="{{ URL::route('administrator.residentialcomplex.index') }}">Residential Complex</a>
+                        <span class="icon-thumbnail">r</span>
+                    </li> 
                     <li class="">
                         <a href="{{ URL::route('administrator.villa.index') }}">Villas</a>
                         <span class="icon-thumbnail">v</span>

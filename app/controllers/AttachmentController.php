@@ -27,7 +27,7 @@ class AttachmentController extends \BaseController {
      */
     public function store() {               
         if (Input::hasFile('file')) {
-            $files = Input::file();
+            $files = Input::file('file');            
             foreach ($files as $file) {
                 $destinationPath = public_path() . '/uploaded_files/';
                 $filename = str_random(6) . '_' . $file->getClientOriginalName();

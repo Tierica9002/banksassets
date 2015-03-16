@@ -37,13 +37,11 @@ Route::group(array('prefix' => 'administrator'), function() {
     Route::resource('industrial', 'IndustrialController');
     Route::resource('land', 'LandController');
     Route::resource('attachment', 'AttachmentController');
+    Route::resource('residentialcomplex', 'ResidentialComplexController');
     Route::resource('office', 'OfficeController');
+    Route::resource('block', 'BlockController');
+    Route::resource('appartment', 'AppartmentController');
     Route::post('/create-xls', array('as' => 'administrator.createxls', 'uses' => 'ContactController@createXls'));    
 });
 
 Route::when('administrator*', 'sentry_is_logged');
-
-
-
-
-

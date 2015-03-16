@@ -81,6 +81,21 @@
                 $('#add-office').submit();
             });
         }
+        if ($('#add-residential').length > 0) {
+            $('#add-residential-submit').click(function() {
+                $('#add-residential').submit();
+            });
+        }
+        if ($('#add-block').length > 0) {
+            $('#add-block-submit').click(function() {
+                $('#add-block').submit();
+            });
+        }
+        if ($('#add-appartment').length > 0) {
+            $('#add-appartment-submit').click(function() {
+                $('#add-appartment').submit();
+            });
+        }
         
         if ($('.add-floor').length > 0) {            
             $('.add-floor').click(function(e){                

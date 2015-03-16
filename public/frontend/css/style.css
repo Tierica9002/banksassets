@@ -5893,3 +5893,12 @@ body, html {
   page-break-after: auto;
   margin: 0;
 }
+
+
+.stat-section {
+    display: none;
+}
+
+#stat-section-1 {
+    display: block;
+}

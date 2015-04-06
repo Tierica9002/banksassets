@@ -102,8 +102,11 @@ class LandController extends \BaseController {
     public function edit($id) {
         $land = Land::findOrFail($id);
         $commons = $land->commons;
-        $photos = $commons->attachments;          
-        return View::make('admin.assets.lands.editland')->withLand($land)->withCommons($commons)->withPhotos($photos);
+        $documents = DB::table('files')->where('parent_id', '=', $commons->id)->where('type', '=', 'document')->get();    
+        
+        $photos = DB::table('files')->where('parent_id', '=', $commons->id)->where('type', '=', 'image')->get();
+               
+        return View::make('admin.assets.lands.editland')->withLand($land)->withCommons($commons)->withPhotos($photos)->withDocuments($documents);
     }
 
     /**

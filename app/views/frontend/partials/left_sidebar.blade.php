@@ -6,7 +6,7 @@
                         <form role="form" id="form-sidebar" class="form-search" action="properties-listing.html">
                             <div class="form-group">
                                 <select name="type" id="market-practice-change-stat">
-                                    <option value="1">Toate Apartamente</option>
+                                    <option value="1">Toate Apartamente{{ trans('messages.testicle') }}</option>
                                     <option value="2">Apartamente cu 1 camera</option>
                                     <option value="3">Apartamente cu 2 camere</option>
                                     <option value="4">Apartamente cu 3 camere</option>

@@ -182,7 +182,7 @@
 
                               <div class="col-sm-12">
                                 @foreach ($photos as $photo)
-                                <img width="200"  src="{{URL::to('/')}}/uploaded_files/{{$photo->filename}}" />
+                                <img width="200"  src="{{URL::to('/')}}/uploaded_files/{{$photo->filename}}" /><a class="delete-file" attr-file-id="{{$photo->id}}" href="">Delete File</a>
                                 @endforeach
                             </div>                                       
 
@@ -207,24 +207,23 @@
                                     <form action="{{ URL::route('administrator.attachment.store') }}" class="dropzone no-margin">                                        
                                     </form>                                    
                                 </div>
-                            </div>
+                            </div>                            
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="panel-title">
                                         Acte / Avize
-                                    </div>
-                                    <div class="tools">
-                                        <a class="collapse" href="javascript:;"></a>
-                                        <a class="config" data-toggle="modal" href="#grid-config"></a>
-                                        <a class="reload" href="javascript:;"></a>
-                                        <a class="remove" href="javascript:;"></a>
-                                    </div>
+                                    </div>                                
                                 </div>
                                 <div class="panel-body no-scroll no-padding">
-                                    <form action="{{ URL::route('administrator.attachment.store') }}" id="dropzone-documents" class="new-dropzone no-margin">                                        
+                                    <form action="{{ URL::route('administrator.attachment.store', array('filetype' => 'document')) }}" class="dropzone no-margin">                                  
                                     </form>                                    
                                 </div>
                             </div>
+                            <div class="col-sm-12">
+                                @foreach ($documents as $document)
+                                <a href="{{URL::to('/')}}/uploaded_files/{{$document->filename}}">{{$document->filename}}</a><a class="delete-file" attr-file-id="{{$document->id}}" href="">Delete File</a><br />                          
+                                @endforeach
+                            </div>      
                             <button class="btn btn-primary" id="add-land-submit">Edit Land</button>
                         </div>
                     </div>

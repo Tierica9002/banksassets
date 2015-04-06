@@ -25,16 +25,20 @@ class AttachmentController extends \BaseController {
      *
      * @return Response
      */
-    public function store() {               
+    public function store() {                       
         if (Input::hasFile('file')) {
             $files = Input::file('file');            
             foreach ($files as $file) {
                 $destinationPath = public_path() . '/uploaded_files/';
-                $filename = str_random(6) . '_' . $file->getClientOriginalName();
+                $filename = str_random(6) . '_' . $file->getClientOriginalName();                
                 $uploadSuccess = $file->move($destinationPath, $filename);
                 $attachment = new Attachment();
                 $attachment->filename = $filename;
-                $attachment->type = 'image';
+                if (Input::get('filetype') == 'document') {
+                    $attachment->type = 'document';    
+                } else {
+                    $attachment->type = 'image';    
+                }
                 $attachment->save();
 
                 if ($galleryPhotos = Session::get('gallery_photos')) {
@@ -84,7 +88,8 @@ class AttachmentController extends \BaseController {
      * @return Response
      */
     public function destroy($id) {
-        //
+        $attachment = Attachment::findOrFail($id);
+        $attachment->delete();
     }
 
 }

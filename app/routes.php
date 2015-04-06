@@ -9,21 +9,45 @@
   | It's a breeze. Simply tell Laravel the URIs it should respond to
   | and give it the Closure to execute when that URI is requested.
   |
- */
-Route::filter('sentry_is_logged', function() {     
+ */  
+  Route::filter('sentry_is_logged', function() {     
     if (!Sentry::check() && (Request::path() != 'administrator/login' && Request::path() != 'administrator/register')) {
-        return Redirect::route('administrator.login');
+      return Redirect::route('administrator.login');
     } elseif(Sentry::check() && (Request::path() == 'administrator/login' || Request::path() == 'administrator/register')) {       
-        return Redirect::route('administrator.dashboard');
+      return Redirect::route('administrator.dashboard');
     }
-});
-Route::get('/', array('as' => 'homepage', 'uses' => 'HomeController@index'));
-Route::get('/about', array('as' => 'main.about', 'uses' => 'HomeController@about') );
-Route::get('/contact', array('as' => 'main.contact', 'uses' => 'HomeController@contact') );
-Route::post('/message', array('as' => 'main.sendmessage', 'uses' => 'ContactController@store'));
-Route::get('/market-practice', array('as' => 'main.marketpractice', 'uses' => 'HomeController@marketPractice'));
+  });
 
-Route::group(array('prefix' => 'administrator'), function() {
+  Route::group(array('prefix' => LaravelLocalization::setLocale()), function() {
+    Route::get('/', array('as' => 'homepage', 'uses' => 'HomeController@index'));
+    Route::get('/about', array('as' => 'main.about', 'uses' => 'HomeController@about') );
+    Route::get('/contact', array('as' => 'main.contact', 'uses' => 'HomeController@contact') );
+    Route::post('/message', array('as' => 'main.sendmessage', 'uses' => 'ContactController@store'));
+    Route::get('/market-practice', array('as' => 'main.marketpractice', 'uses' => 'HomeController@marketPractice'));
+  });      
+
+   Route::group(
+    array(
+        'prefix' => LaravelLocalization::setLocale(),
+        'before' => 'LaravelLocalizationRedirectFilter' // LaravelLocalization filter
+    ),
+    function()
+    {
+         Route::get('/', array('as' => 'homepage', 'uses' => 'HomeController@index'));
+    Route::get('/about', array('as' => 'main.about', 'uses' => 'HomeController@about') );
+    Route::get('/contact', array('as' => 'main.contact', 'uses' => 'HomeController@contact') );
+    Route::post('/message', array('as' => 'main.sendmessage', 'uses' => 'ContactController@store'));
+    Route::get('/market-practice', array('as' => 'main.marketpractice', 'uses' => 'HomeController@marketPractice'));
+    });
+
+
+  Route::get('/', array('as' => 'homepage', 'uses' => 'HomeController@index'));
+  Route::get('/about', array('as' => 'main.about', 'uses' => 'HomeController@about') );
+  Route::get('/contact', array('as' => 'main.contact', 'uses' => 'HomeController@contact') );
+  Route::post('/message', array('as' => 'main.sendmessage', 'uses' => 'ContactController@store'));
+  Route::get('/market-practice', array('as' => 'main.marketpractice', 'uses' => 'HomeController@marketPractice'));
+
+  Route::group(array('prefix' => 'administrator'), function() {
     Route::get('/', array('as' => 'administrator.dashboard', 'uses' => 'AdminHomeController@index'));
     Route::get('/login', array( 'as'=> 'administrator.login', 'uses' => 'AdminHomeController@login'));
     Route::get('/logout', array( 'as'=> 'administrator.logout', 'uses' => 'AdminHomeController@logout'));
@@ -42,6 +66,9 @@ Route::group(array('prefix' => 'administrator'), function() {
     Route::resource('block', 'BlockController');
     Route::resource('appartment', 'AppartmentController');
     Route::post('/create-xls', array('as' => 'administrator.createxls', 'uses' => 'ContactController@createXls'));    
-});
+  });
 
 Route::when('administrator*', 'sentry_is_logged');
+Route::when('cacat*', 'set_language');
+
+

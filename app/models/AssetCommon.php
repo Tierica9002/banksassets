@@ -27,6 +27,6 @@ class AssetCommon extends Eloquent {
     
     public function attachments() {
         return $this->hasMany('Attachment', 'parent_id');
-    }
+    }    
 
 }

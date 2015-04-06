@@ -40,8 +40,8 @@
                                 <a href="sign-in.html">Sign In</a>
                             </div> -->
                             <div class="language-bar">
-                                <a href="#" class="active"><img src="{{asset('frontend/img/flags/gb.png')}}" alt="English"></a>
-                                <a href="#"><img src="{{asset('frontend/img/flags/ro.png')}}" alt="Romanian"></a>
+                                <a href="{{ LaravelLocalization::getLocalizedURL('en') }}" class="active"><img src="{{asset('frontend/img/flags/gb.png')}}" alt="English"></a>
+                                <a href="{{ LaravelLocalization::getLocalizedURL('ro') }}"><img src="{{asset('frontend/img/flags/ro.png')}}" alt="Romanian"></a>
                             </div>
                         </div>
                     </div>

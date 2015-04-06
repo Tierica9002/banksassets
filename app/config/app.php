@@ -53,6 +53,15 @@ return array(
 	*/
 
 	'locale' => 'en',
+	/**
+	 * List of alternative languages (not including the one specified as 'locale')
+	 */
+	'locales' => array ('ro'),
+
+	/**
+	 *  Prefix of selected locale  - leave empty (set in runtime)
+	 */
+	'locale_prefix' => '',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -123,6 +132,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
                 'Cartalyst\Sentry\SentryServiceProvider',
                 'Maatwebsite\Excel\ExcelServiceProvider',
+                'Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider'
 
 	),
 
@@ -192,6 +202,7 @@ return array(
 		'View'              => 'Illuminate\Support\Facades\View',
                 'Sentry'            => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
                 'Excel'             => 'Maatwebsite\Excel\Facades\Excel',
+                'LaravelLocalization'   => 'Mcamara\LaravelLocalization\Facades\LaravelLocalization'
 
 	),
 
